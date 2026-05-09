@@ -5,6 +5,11 @@ import { Question, Temperament, TestResult, ResultProfile } from './types';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
+// ✅ FIX #2 — Konstanta terpusat, tidak ada magic number lagi
+const TOTAL_QUESTIONS = 10;
+const MAX_SCORE_PER_TYPE = TOTAL_QUESTIONS; // untuk bar skor hasil
+const PURE_TYPE_GAP_THRESHOLD = 4; // disesuaikan dari 15 → 4 karena soal lebih sedikit
+
 // --- Components ---
 
 const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
@@ -18,7 +23,7 @@ const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
       Tes Kepribadian
     </h1>
     <p className="text-base md:text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
-      Temukan tipe kepribadian Anda berdasarkan 4 Type Personality Sanguinis, Koleris, Melankolis, Plegmatis
+      Temukan tipe kepribadian Anda berdasarkan 4 Type Personality: Sanguinis, Koleris, Melankolis, Plegmatis
     </p>
     <button
       onClick={onStart}
@@ -26,17 +31,19 @@ const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
     >
       Mulai Tes Sekarang
     </button>
-    <p className="mt-6 text-xs md:text-sm text-slate-500 font-medium tracking-wide uppercase">Gratis & Tanpa Login</p>
+    <p className="mt-6 text-xs md:text-sm text-slate-500 font-medium tracking-wide uppercase">
+      Gratis &amp; Tanpa Login · {TOTAL_QUESTIONS} Pertanyaan
+    </p>
   </div>
 );
 
 const QuizScreen: React.FC<{
   question: Question;
   currentIndex: number;
-  totalQuestions: number;
   onAnswer: (answer: Temperament) => void;
-}> = ({ question, currentIndex, totalQuestions, onAnswer }) => {
-  const progress = ((currentIndex) / totalQuestions) * 100;
+}> = ({ question, currentIndex, onAnswer }) => {
+  // ✅ FIX #2 — Pakai konstanta TOTAL_QUESTIONS
+  const progress = (currentIndex / TOTAL_QUESTIONS) * 100;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 max-w-3xl mx-auto fade-in border-x border-slate-800 shadow-2xl">
@@ -50,9 +57,10 @@ const QuizScreen: React.FC<{
 
       <div className="flex-1 flex flex-col justify-start md:justify-center p-4 sm:p-10 pt-6 md:pt-10">
         <span className="text-xs font-bold text-indigo-400 mb-3 uppercase tracking-widest bg-slate-800 inline-block w-fit px-2 py-1 rounded-full border border-slate-700">
-          Pertanyaan {currentIndex + 1} / {totalQuestions}
+          {/* ✅ FIX #2 — Pakai konstanta TOTAL_QUESTIONS */}
+          Pertanyaan {currentIndex + 1} / {TOTAL_QUESTIONS}
         </span>
-        
+
         <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-6 md:mb-12 leading-snug">
           {question.question}
         </h2>
@@ -82,68 +90,82 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
   const [isDownloading, setIsDownloading] = useState(false);
   const printRef = useRef<HTMLDivElement>(null);
 
-  // Explicitly type the entries to ensure TypeScript knows values are numbers
-  const sortedScores = (Object.entries(result.scores) as [string, number][]).sort(([, a], [, b]) => b - a);
+  const sortedScores = (Object.entries(result.scores) as [Temperament, number][])
+    .sort(([, a], [, b]) => b - a);
+
   const primaryScore = sortedScores[0]?.[1] ?? 0;
   const secondaryScore = sortedScores[1]?.[1] ?? 0;
-  
-  let profileKey = `${result.primary}-${result.secondary}`;
   const gap = primaryScore - secondaryScore;
-  let isPure = false;
 
-  // Logic: Only treat as Pure type if gap is > 15 points
-  if (gap > 15) {
-    profileKey = `${result.primary}-${result.primary}`;
-    isPure = true;
-  } else if (result.primary === result.secondary) {
-    const nextKey = sortedScores.find(k => k[0] !== result.primary);
-    profileKey = nextKey ? `${result.primary}-${nextKey[0]}` : `${result.primary}-K`;
+  // ✅ FIX #2 — Pakai konstanta PURE_TYPE_GAP_THRESHOLD
+  const isPure = gap > PURE_TYPE_GAP_THRESHOLD;
+  let profileKey = isPure
+    ? `${result.primary}-${result.primary}`
+    : `${result.primary}-${result.secondary}`;
+
+  if (!isPure && result.primary === result.secondary) {
+    const next = sortedScores.find(k => k[0] !== result.primary);
+    profileKey = next ? `${result.primary}-${next[0]}` : `${result.primary}-K`;
   }
 
-  const profile: ResultProfile | undefined = RESULT_PROFILES[profileKey] || RESULT_PROFILES["S-K"]; 
+  // ✅ FIX #1 — Fallback eksplisit dengan pesan error, bukan diam-diam pakai S-K
+  const profile: ResultProfile | undefined = RESULT_PROFILES[profileKey];
+  if (!profile) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center text-center p-8">
+        <div>
+          <p className="text-rose-400 text-lg font-semibold mb-2">
+            Profil tidak ditemukan untuk kombinasi: <strong>{profileKey}</strong>
+          </p>
+          <p className="text-slate-400 text-sm mb-6">
+            Silakan tambahkan profil ini ke <code className="bg-slate-800 px-1 py-0.5 rounded">RESULT_PROFILES</code> di <code className="bg-slate-800 px-1 py-0.5 rounded">data.ts</code>
+          </p>
+          <button
+            onClick={onRetry}
+            className="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl border border-slate-600"
+          >
+            Ulangi Tes
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-  const temperamentsFull = {
-    'S': 'Sanguinis',
-    'K': 'Koleris',
-    'M': 'Melankolis',
-    'P': 'Plegmatis'
+  const temperamentsFull: Record<Temperament, string> = {
+    S: 'Sanguinis',
+    K: 'Koleris',
+    M: 'Melankolis',
+    P: 'Plegmatis',
   };
 
+  // ✅ FIX #4 — Ganti setTimeout arbitrer dengan double requestAnimationFrame
   const handleDownloadPDF = async () => {
     if (!printRef.current) return;
     setIsDownloading(true);
 
     try {
-      // Tunggu sebentar untuk memastikan render stabil
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise<void>(resolve =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+      );
 
-      const element = printRef.current;
-      const canvas = await html2canvas(element, {
-        scale: 2, // Meningkatkan kualitas gambar
-        backgroundColor: '#0f172a', // Sesuai warna bg-slate-900
+      const canvas = await html2canvas(printRef.current, {
+        scale: 2,
+        backgroundColor: '#0f172a',
         useCORS: true,
         logging: false,
       });
 
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'mm',
-        format: 'a4',
-      });
-
-      const imgWidth = 210; // Lebar A4 dalam mm
-      const pageHeight = 297; // Tinggi A4 dalam mm
+      const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+      const imgWidth = 210;
+      const pageHeight = 297;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      
       let heightLeft = imgHeight;
       let position = 0;
 
-      // Halaman pertama
       pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
       heightLeft -= pageHeight;
 
-      // Halaman berikutnya jika konten panjang
       while (heightLeft >= 0) {
         position = heightLeft - imgHeight;
         pdf.addPage();
@@ -162,11 +184,11 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
 
   return (
     <div className="min-h-screen bg-slate-900 py-10 px-4 sm:px-6 fade-in text-slate-200">
-      <div 
+      <div
         ref={printRef}
         className="max-w-4xl mx-auto bg-slate-800 rounded-[2rem] shadow-2xl overflow-hidden border border-slate-700"
       >
-        
+
         {/* Header Section */}
         <div className="bg-gradient-to-br from-indigo-900 to-slate-900 p-8 text-center border-b border-indigo-900/50">
           <h2 className="text-xl text-indigo-300 font-semibold mb-3 tracking-wide uppercase">Hasil Analisis Anda</h2>
@@ -178,7 +200,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
           </h1>
         </div>
 
-        {/* Dynamic Personality Note - NEW SECTION */}
+        {/* Dynamic Personality Note */}
         <div className="bg-slate-900/50 p-6 mx-6 -mt-4 mb-4 rounded-xl border-l-4 border-yellow-500 relative z-10">
           <h4 className="text-yellow-500 font-bold uppercase text-xs tracking-widest mb-1 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -198,9 +220,10 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               <div className="text-3xl font-bold text-white mb-1">{score}</div>
               <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">{temperamentsFull[key]}</div>
               <div className="mt-3 w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
-                <div 
-                  className={`h-full ${key === result.primary ? 'bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]' : 'bg-slate-600'}`} 
-                  style={{ width: `${(score / 30) * 100}%` }}
+                {/* ✅ FIX #2 — Pakai MAX_SCORE_PER_TYPE bukan hardcode 30 */}
+                <div
+                  className={`h-full ${key === result.primary ? 'bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]' : 'bg-slate-600'}`}
+                  style={{ width: `${(score / MAX_SCORE_PER_TYPE) * 100}%` }}
                 ></div>
               </div>
             </div>
@@ -209,7 +232,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
 
         {/* Content Section */}
         <div className="p-8 space-y-12 leading-relaxed">
-          
+
           <section>
             <h3 className="text-xl font-bold text-indigo-400 mb-4 border-l-4 border-indigo-500 pl-4">Ringkasan Profil</h3>
             <p className="text-lg text-slate-300">{profile.summary}</p>
@@ -221,7 +244,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               <ul className="space-y-4 mb-6">
                 {profile.decisionStyle.map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-emerald-500 mr-3 mt-1">✓</span> 
+                    <span className="text-emerald-500 mr-3 mt-1">✓</span>
                     <span className="text-slate-300">{item}</span>
                   </li>
                 ))}
@@ -241,7 +264,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               <ul className="space-y-4">
                 {profile.challenges.map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-rose-500 mr-3 mt-1">!</span> 
+                    <span className="text-rose-500 mr-3 mt-1">!</span>
                     <span className="text-slate-300">{item}</span>
                   </li>
                 ))}
@@ -261,8 +284,8 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                   <div className="mt-4 text-sm text-rose-300 bg-rose-900/20 p-4 rounded-lg border border-rose-500/20 flex gap-3 items-start">
                     <span className="text-xl">⚠️</span>
                     <div>
-                      <strong className="block text-rose-200 mb-1">Tanda Overload:</strong> 
-                      {profile.stressSigns.join(", ")}
+                      <strong className="block text-rose-200 mb-1">Tanda Overload:</strong>
+                      {profile.stressSigns.join(', ')}
                     </div>
                   </div>
                 )}
@@ -274,10 +297,10 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                 </ul>
                 {profile.interactionTips && (
                   <div className="mt-4 bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-                     <strong className="block text-slate-400 text-xs uppercase mb-2">Contoh Kalimat Efektif:</strong>
-                     {profile.interactionTips.map((tip, i) => (
-                       <p key={i} className="text-indigo-200 italic mb-1">"{tip}"</p>
-                     ))}
+                    <strong className="block text-slate-400 text-xs uppercase mb-2">Contoh Kalimat Efektif:</strong>
+                    {profile.interactionTips.map((tip, i) => (
+                      <p key={i} className="text-indigo-200 italic mb-1">"{tip}"</p>
+                    ))}
                   </div>
                 )}
               </div>
@@ -287,16 +310,16 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
           <section>
             <h3 className="text-xl font-bold text-white mb-4">Manajemen Konflik</h3>
             <div className="bg-slate-800 border border-slate-700 p-6 rounded-xl space-y-4 shadow-lg">
-               <div><strong className="text-slate-200 block mb-1">🔥 Pemicu:</strong> <span className="text-slate-400">{profile.conflictTrigger}</span></div>
-               {profile.conflictStress && <div><strong className="text-slate-200 block mb-1">🤯 Saat Stres:</strong> <span className="text-slate-400">{profile.conflictStress}</span></div>}
-               {profile.conflictSolution && (
-                 <div className="mt-4 pt-4 border-t border-slate-700">
-                   <strong className="block text-emerald-400 mb-2">✅ Cara Meredakan:</strong>
-                   <ul className="list-disc ml-5 text-slate-300 space-y-1">
-                     {profile.conflictSolution.map((s, i) => <li key={i}>{s}</li>)}
-                   </ul>
-                 </div>
-               )}
+              <div><strong className="text-slate-200 block mb-1">🔥 Pemicu:</strong> <span className="text-slate-400">{profile.conflictTrigger}</span></div>
+              {profile.conflictStress && <div><strong className="text-slate-200 block mb-1">🤯 Saat Stres:</strong> <span className="text-slate-400">{profile.conflictStress}</span></div>}
+              {profile.conflictSolution && (
+                <div className="mt-4 pt-4 border-t border-slate-700">
+                  <strong className="block text-emerald-400 mb-2">✅ Cara Meredakan:</strong>
+                  <ul className="list-disc ml-5 text-slate-300 space-y-1">
+                    {profile.conflictSolution.map((s, i) => <li key={i}>{s}</li>)}
+                  </ul>
+                </div>
+              )}
             </div>
           </section>
 
@@ -310,7 +333,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               ))}
             </div>
           </section>
-          
+
           {profile.checklist && (
             <section>
               <h3 className="text-xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">Checklist 90 Hari</h3>
@@ -318,7 +341,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                 <ul className="space-y-3">
                   {profile.checklist.map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-blue-400 mr-3 font-bold mt-1">•</span> 
+                      <span className="text-blue-400 mr-3 font-bold mt-1">•</span>
                       <span className="text-slate-300">{item}</span>
                     </li>
                   ))}
@@ -326,13 +349,13 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               </div>
             </section>
           )}
-          
+
           {profile.direction && (
-             <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-8 rounded-2xl text-center border border-slate-700 shadow-xl relative overflow-hidden">
-               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-               <h3 className="text-sm font-bold mb-3 uppercase tracking-widest text-slate-400">Arah yang Jelas</h3>
-               <p className="text-xl md:text-2xl font-medium leading-relaxed text-indigo-100">"{profile.direction}"</p>
-             </section>
+            <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-8 rounded-2xl text-center border border-slate-700 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+              <h3 className="text-sm font-bold mb-3 uppercase tracking-widest text-slate-400">Arah yang Jelas</h3>
+              <p className="text-xl md:text-2xl font-medium leading-relaxed text-indigo-100">"{profile.direction}"</p>
+            </section>
           )}
 
           <section>
@@ -364,7 +387,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
           >
             Ulangi Tes
           </button>
-          
+
           <button
             onClick={handleDownloadPDF}
             disabled={isDownloading}
@@ -400,9 +423,16 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [result, setResult] = useState<TestResult | null>(null);
 
-  // Initialize test
   const handleStart = () => {
-    const questions = getRandomQuestions(QUESTIONS_DB, 30);
+    // ✅ FIX #2 — Pakai konstanta TOTAL_QUESTIONS
+    const questions = getRandomQuestions(QUESTIONS_DB, TOTAL_QUESTIONS);
+
+    // ✅ FIX #3 — Guard: pastikan soal tersedia sebelum mulai
+    if (questions.length === 0) {
+      alert('Data soal tidak tersedia. Periksa QUESTIONS_DB di data.ts.');
+      return;
+    }
+
     setCurrentQuestions(questions);
     setAnswers([]);
     setCurrentIndex(0);
@@ -411,10 +441,14 @@ export default function App() {
   };
 
   const handleAnswer = (answer: Temperament) => {
+    // ✅ FIX #3 — Guard: jaga dari state kosong
+    if (currentQuestions.length === 0) return;
+
     const newAnswers = [...answers, answer];
     setAnswers(newAnswers);
 
-    if (currentIndex < 29) {
+    // ✅ FIX #2 — Pakai TOTAL_QUESTIONS, bukan hardcode 29
+    if (currentIndex < TOTAL_QUESTIONS - 1) {
       setCurrentIndex(currentIndex + 1);
       window.scrollTo(0, 0);
     } else {
@@ -436,7 +470,6 @@ export default function App() {
         <QuizScreen
           question={currentQuestions[currentIndex]}
           currentIndex={currentIndex}
-          totalQuestions={30}
           onAnswer={handleAnswer}
         />
       )}
