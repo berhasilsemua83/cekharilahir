@@ -1,0 +1,5 @@
+{
+  "name": "Personality Insight",
+  "description": "A comprehensive personality test application based on the 4 temperaments (Sanguine, Choleric, Melancholic, Phlegmatic). It analyzes your responses to provide deep insights into your character, leadership style, and potential.",
+  "requestFramePermissions": []
+}
