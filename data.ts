@@ -18007,966 +18007,1113 @@ export const QUESTIONS_DB: Question[] = [
   }
 ];
 
+
 export const RESULT_PROFILES: Record<string, ResultProfile> = {
   "S-K": {
-    title: "Sanguinis–Koleris (Pemimpin Berkarisma)",
-    summary: "Anda tipe yang cepat menyala: mudah membangun koneksi, optimis, dan berani bergerak. Anda bisa mengangkat energi tim sekaligus mendorong hasil. Kekuatan Anda paling terasa saat dibutuhkan dorongan, promosi ide, negosiasi, dan eksekusi cepat. Catatan penting: dominan Anda bisa berubah. Saat suasana sosial menyenangkan, sisi Sanguinis menguat. Saat target menekan atau perlu keputusan tegas, sisi Koleris mengambil alih.",
+    title: "Sanguinis–Koleris (Penggerak yang Penuh Semangat)",
+    summary: "Anda adalah sosok yang 'cepat menyala': mudah membangun keakraban, selalu optimis, dan berani mengambil langkah pertama. Di sekolah, kampus, maupun tempat kerja, Anda bisa menghidupkan suasana sekaligus mendorong kelompok untuk mencapai tujuan. Kekuatan Anda paling terasa saat dibutuhkan ide segar, kecepatan, dan keberanian mengambil risiko. Namun, ingatlah bahwa gaya Anda yang dominan bisa berubah sesuai situasi; saat sedang santai, Anda sangat hangat, tapi saat ada target atau tugas mendesak, Anda bisa berubah menjadi sangat tegas dan menuntut.",
     decisionStyle: [
-      "Fokus peluang dan solusi; lebih suka 'jalan dulu' daripada menunggu sempurna.",
-      "Menangkap gambaran besar dengan cepat, namun rawan melewatkan detail penting.",
-      "Mudah yakin, sehingga perlu 'rem' untuk cek risiko."
+      "Fokus pada peluang dan solusi; lebih suka prinsip 'jalan dulu, perbaiki nanti' daripada menunggu semuanya sempurna.",
+      "Mampu menangkap gambaran besar dari sebuah situasi dengan sangat cepat.",
+      "Terkadang saking cepatnya merasa yakin, Anda rawan melewatkan detail-detail kecil yang sebenarnya penting."
     ],
     decisionGuide: [
-      "Tentukan tujuan (1 kalimat).",
-      "Tetapkan batas risiko (apa yang tidak boleh terjadi).",
-      "Pilih langkah pertama yang bisa dikerjakan hari ini.",
-      "Evaluasi setelah 24–72 jam (perbaiki sambil jalan)."
+      "Tentukan satu tujuan utama (tulis dalam 1 kalimat pendek).",
+      "Pikirkan batas risikonya (apa hal terburuk yang mungkin terjadi?).",
+      "Pilih langkah pertama yang paling mudah dikerjakan hari ini.",
+      "Evaluasi ulang setelah beberapa hari berjalan, lalu perbaiki jika ada yang kurang."
     ],
     emotionalDynamics: [
-      "Tampak positif; saat kecewa, Anda cenderung menutupinya dan tetap terlihat kuat.",
-      "Sensitif pada kemacetan progres dan hilangnya kontrol.",
-      "Bisa kelelahan tanpa sadar karena memaksa terus."
+      "Selalu berusaha tampil positif dan ceria. Saat merasa kecewa, Anda cenderung menutupinya dan tetap berusaha terlihat kuat.",
+      "Sangat sensitif jika merasa tidak punya kendali, atau jika melihat rencana berjalan terlalu lambat.",
+      "Terkadang bisa kelelahan tanpa sadar karena terus memaksakan diri untuk bergerak maju."
     ],
-    stressSigns: ["Mudah tersinggung", "Sulit diam", "Ingin mengendalikan semua", "Impuls belanja/ambil proyek baru"],
+    stressSigns: [
+      "Mudah tersinggung dan bicara dengan nada tinggi", 
+      "Sulit untuk duduk diam", 
+      "Ingin mengambil alih dan mengendalikan semua pekerjaan", 
+      "Impulsif (seperti tiba-tiba belanja atau mengambil hobi/tugas baru)"
+    ],
     interactionStyle: [
-      "Persuasif dan nyaman tampil; mudah menggerakkan orang.",
-      "Bisa mengambil alih percakapan tanpa sadar.",
-      "Paling efektif saat menambah porsi mendengar."
+      "Pintar membujuk dan sangat nyaman menjadi pusat perhatian; mudah menggerakkan semangat orang lain.",
+      "Saking antusiasnya, Anda sering tanpa sadar mendominasi percakapan dan memotong ucapan orang.",
+      "Sangat efektif ketika Anda mulai mau meluangkan lebih banyak waktu untuk mendengarkan."
     ],
     interactionTips: [
-      "Saya ingin dengar pendapat Anda dulu sebelum saya putuskan.",
-      "Apa yang paling penting buat Anda dalam situasi ini?"
+      "Saya ingin dengar pendapat kamu dulu sebelum kita putuskan bersama.",
+      "Menurut kamu, apa hal yang paling penting untuk kita perhatikan di situasi ini?"
     ],
     challenges: [
-      "Keputusan terlalu cepat",
-      "Mulai banyak, selesai sedikit",
-      "Kurang follow-up dan detail",
-      "Terkesan dominan/menekan"
+      "Mengambil keputusan terlalu cepat tanpa pikir panjang",
+      "Semangat di awal, tapi sering kehabisan energi sebelum tugas benar-benar selesai",
+      "Kurang teliti pada hal-hal kecil",
+      "Terkadang terkesan terlalu menekan atau mendikte orang lain"
     ],
-    conflictTrigger: "Orang lambat, aturan kaku, tugas repetitif, kritik di depan umum.",
-    conflictStress: "Anda mempercepat dengan tekanan, menyederhanakan berlebihan, atau mengambil jalan pintas.",
+    conflictTrigger: "Orang yang bergerak terlalu lambat, aturan yang terlalu kaku, tugas yang membosankan, atau jika dikritik di depan banyak orang.",
+    conflictStress: "Anda akan memberikan tekanan, menyederhanakan masalah secara berlebihan, atau mencari jalan pintas agar masalah cepat beres.",
     conflictSolution: [
-      "Sepakati target bersama (1 kalimat).",
-      "Tetapkan PIC detail (orang lain) dan tenggat.",
-      "Tutup dengan langkah konkret tertulis."
+      "Sepakati tujuan akhirnya bersama-sama (cukup 1 kalimat).",
+      "Bagikan tugas dengan sangat jelas: siapa mengerjakan apa, dan kapan harus selesai.",
+      "Tutup perdebatan dengan langkah nyata yang disepakati bersama."
     ],
     recommendations: [
-      "Hari 1–3 (Rem keputusan): sebelum keputusan besar, tulis 3 risiko + rencana cadangan.",
-      "Hari 4–6 (Fokus): pilih 1 prioritas; larang proyek baru sampai milestone tercapai.",
-      "Hari 7–10 (Detail aman): pakai checklist 10 poin untuk pekerjaan berulang.",
-      "Hari 11–14 (Relasi kunci): 2 percakapan 1–1; dengarkan 70% waktu; catat 1 tindak lanjut."
+      "Hari 1–3 (Rem Keputusan): Sebelum mengambil keputusan besar (atau belanja mahal), tahan dulu. Tulis 3 risikonya.",
+      "Hari 4–6 (Fokus Satu Hal): Pilih 1 prioritas tugas. Jangan mulai tugas atau kegiatan baru sebelum yang ini selesai.",
+      "Hari 7–10 (Beri Perhatian pada Detail): Gunakan catatan kecil atau daftar periksa (checklist) agar tidak ada barang/tugas yang tertinggal.",
+      "Hari 11–14 (Perbaiki Relasi): Lakukan 2 obrolan santai dengan teman/keluarga. Tantang diri Anda untuk mendengarkan 70% waktu tanpa memotong."
     ],
-    direction: "Dalam 2–4 minggu, keputusan Anda tetap cepat namun lebih aman, proyek lebih selesai, dan hubungan kerja lebih solid karena komunikasi lebih seimbang.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang cepat dan berani, namun keputusan Anda akan lebih aman, tugas-tugas lebih tuntas, dan hubungan dengan orang lain menjadi jauh lebih hangat.",
     checklist: [
-      "Minggu 1–2: Tentukan 1 target utama 90 hari + 3 metrik sederhana.",
-      "Minggu 3–4: Buat ritme eksekusi (review mingguan 30 menit).",
-      "Minggu 5–6: Pasang sistem follow-up (CRM/kanban/checklist).",
-      "Minggu 7–8: Delegasikan detail ke 1 orang atau SOP singkat 1 halaman.",
-      "Minggu 9–10: Audit proyek: tutup/stop 20% yang tidak berdampak.",
-      "Minggu 11–12: Evaluasi hasil + perbaiki 1 kebiasaan pemicu impulsif."
+      "Bulan 1: Tentukan 1 target/kegiatan utama yang ingin diselesaikan, jangan mengambil semuanya.",
+      "Bulan 1: Belajar meluangkan waktu 15 menit setiap minggu untuk mengevaluasi apa yang sudah dikerjakan.",
+      "Bulan 2: Biasakan mencatat tugas di buku/HP agar tidak hanya mengandalkan ingatan.",
+      "Bulan 2: Jika bekerja dalam kelompok, cobalah percayakan 1 tugas penting kepada teman tanpa ikut campur.",
+      "Bulan 3: Hentikan kegiatan atau hobi yang hanya membuang waktu dan tidak memberi manfaat nyata.",
+      "Bulan 3: Evaluasi cara bicara Anda. Kurangi kebiasaan merespons dengan emosi saat sedang terburu-buru."
     ],
     suitableCareers: [
-      "Sales/BD, Marketing Activation",
-      "Presenter/Trainer, Community Lead",
-      "Founder/Owner Bisnis (Tahap Awal)",
-      "Project Lead (Ritme Cepat)",
-      "Role Negosiasi dan Networking"
+      "Pemimpin Kelompok / Ketua Kelas",
+      "Humas, Negosiator, atau Pemasaran",
+      "Presenter, Youtuber, atau Pembicara",
+      "Perintis Kegiatan atau Pengusaha (Tahap Awal)",
+      "Pekerjaan yang menuntut pergerakan cepat dan banyak interaksi"
     ]
   },
   "S-M": {
-    title: "Sanguinis–Melankolis (Komunikator Mendalam)",
-    summary: "Anda hangat, mudah nyambung, namun berpikir dalam. Anda kuat dalam komunikasi yang menyentuh sekaligus masuk akal. Orang cenderung percaya karena Anda bisa memahami emosi dan tetap menjaga struktur. Catatan penting: Saat dinilai/dikritik, sisi Melankolis menguat (lebih sensitif, detail). Saat suasana suportif, sisi Sanguinis menguat (ekspresif).",
+    title: "Sanguinis–Melankolis (Pencerita yang Mendalam)",
+    summary: "Anda adalah sosok yang hangat dan mudah nyambung dengan orang lain, namun di saat yang sama, Anda adalah seorang pemikir yang mendalam. Teman-teman suka bercerita pada Anda karena ucapan Anda tidak hanya menghibur, tapi juga masuk akal. Catatan penting: saat suasana sedang mendukung, Anda akan tampil sangat ceria (Sanguinis). Namun, saat Anda sedang merasa dikritik atau tertekan, sisi Melankolis Anda akan muncul, membuat Anda lebih sensitif, pendiam, dan banyak memikirkan segalanya.",
     decisionStyle: [
-      "Melihat banyak sisi; logika dan perasaan berjalan bersamaan.",
-      "Rawan 'kebanyakan opsi' sehingga keputusan sulit ditutup.",
-      "Butuh batas waktu untuk mencegah overthinking."
+      "Selalu melihat sesuatu dari banyak sisi; logika dan perasaan berjalan secara bersamaan.",
+      "Terkadang Anda terlalu banyak memikirkan pilihan (overthinking) sehingga sangat sulit mengambil keputusan akhir.",
+      "Sangat membutuhkan batas waktu (deadline) agar tidak terjebak dalam keraguan."
     ],
     decisionGuide: [
-      "Tulis masalahnya 1 kalimat.",
-      "Buat 2 opsi saja (bukan banyak).",
-      "Tetapkan deadline keputusan (mis. 48 jam).",
-      "Putuskan, lalu evaluasi setelah berjalan."
+      "Tulis masalah yang sedang Anda hadapi dalam 1 kalimat pendek.",
+      "Beri diri Anda maksimal 2 pilihan saja, jangan terlalu banyak.",
+      "Tetapkan batas waktu kapan Anda harus memilih (misalnya: 'Malam ini harus sudah ada keputusan').",
+      "Pilih salah satu, jalankan, dan ingat bahwa tidak ada keputusan yang 100% sempurna."
     ],
     emotionalDynamics: [
-      "Bisa tampak ceria, tetapi mudah memikirkan komentar orang.",
-      "Butuh apresiasi yang jelas, bukan sekadar 'ya sudah'.",
-      "Saat lelah, Anda menarik diri dan memikir berulang."
+      "Di luar Anda bisa tampak sangat ceria, tetapi di dalam hati Anda mudah memikirkan komentar atau pandangan orang lain.",
+      "Sangat membutuhkan apresiasi dan pujian yang tulus, bukan sekadar kata 'bagus' yang basa-basi.",
+      "Saat lelah hati, Anda cenderung menarik diri dari pergaulan dan memutar kembali masalah di pikiran Anda berulang-ulang."
     ],
-    stressSigns: ["Sulit fokus", "Sensitif", "Ingin menghindar chat", "Perfeksionisme naik"],
+    stressSigns: [
+      "Sulit fokus pada satu hal", 
+      "Sangat sensitif dan mudah tersinggung", 
+      "Sengaja menghindari balas pesan/chat dari orang lain", 
+      "Tiba-tiba menjadi sangat perfeksionis pada hal sepele"
+    ],
     interactionStyle: [
-      "Natural dalam membangun kedekatan dan kepercayaan.",
-      "Kadang menunda obrolan penting agar tidak menyinggung.",
-      "Efektif sebagai fasilitator/pengajar/komunikator."
+      "Sangat natural dalam membangun kedekatan, rasa percaya, dan empati dengan orang lain.",
+      "Terkadang sering menunda membicarakan hal yang penting karena takut akan menyinggung perasaan teman.",
+      "Sangat hebat jika diminta menjadi fasilitator, penengah, atau pendengar yang baik."
     ],
     interactionTips: [
-      "Saya butuh kejelasan di bagian ini supaya kita sama-sama enak.",
-      "Saya setuju A, tapi bagian B perlu kita rapikan."
+      "Aku butuh kejelasan di bagian ini supaya kita sama-sama nyaman ke depannya.",
+      "Aku setuju dengan ide kamu, tapi mungkin bagian yang ini perlu kita rapikan lagi."
     ],
     challenges: [
-      "Overthinking dan ragu-ragu",
-      "People pleasing",
-      "Sensitif kritik",
-      "Standar tinggi tapi dipendam (jadi capek)"
+      "Terlalu banyak berpikir dan sering meragukan diri sendiri (Overthinking)",
+      "Terlalu ingin menyenangkan semua orang (People-pleasing)",
+      "Sangat sensitif terhadap kritikan atau penolakan",
+      "Punya standar yang tinggi tapi sering dipendam sendiri, sehingga akhirnya merasa lelah batin"
     ],
-    conflictTrigger: "Konflik interpersonal, kritik keras, deadline ketat.",
-    conflictStress: "Anda menghindar, bekerja terlalu lama, lalu drop.",
+    conflictTrigger: "Kesalahpahaman dengan teman, menerima kritik yang kasar, atau dikejar tugas dengan waktu yang sangat mepet.",
+    conflictStress: "Anda akan mencoba menghindar, mengurung diri, terus memikirkan masalahnya semalaman, lalu kehabisan energi (drop).",
     conflictSolution: [
-      "Minta jeda singkat untuk menenangkan diri.",
-      "Pakai format: fakta → perasaan → kebutuhan → permintaan.",
-      "Akhiri dengan langkah kecil yang jelas."
+      "Minta waktu jeda sejenak untuk menenangkan diri dan pikiran Anda.",
+      "Sampaikan apa yang Anda rasakan dengan jujur menggunakan formula: 'Saat kamu begini... aku merasa begini... aku butuh...'.",
+      "Akhiri obrolan dengan satu kesepakatan kecil agar perasaan kembali lega."
     ],
     recommendations: [
-      "Hari 1–3 (Batas berpikir): timer 30 menit untuk analisis, lalu tulis keputusan sementara.",
-      "Hari 4–6 (Latihan menolak): 2 kali bilang 'belum bisa' + tawarkan alternatif.",
-      "Hari 7–10 (Feedback sehat): minta feedback tertulis: 1 yang bagus + 1 ditingkatkan.",
-      "Hari 11–14 (Selesai > sempurna): tetapkan 'cukup baik' untuk 1 proyek dan selesaikan."
+      "Hari 1–3 (Batas Berpikir): Pasang alarm 30 menit. Jika waktunya habis, Anda harus membuat keputusan sementara tanpa boleh berpikir lagi.",
+      "Hari 4–6 (Latihan Menolak): Cobalah 2 kali bilang 'Maaf aku belum bisa' pada permintaan yang memang memberatkan Anda.",
+      "Hari 7–10 (Menerima Kritik): Berlatih meminta masukan yang sehat dari teman tepercaya ('Apa satu hal yang bisa aku perbaiki?').",
+      "Hari 11–14 (Selesai > Sempurna): Ingatkan diri Anda bahwa tugas yang 'Selesai' jauh lebih baik daripada tugas 'Sempurna tapi tidak pernah dikumpulkan'."
     ],
-    direction: "Dalam 2–4 minggu, Anda lebih tegas tanpa kehilangan hangat, lebih cepat memutuskan, dan lebih tahan terhadap kritik.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan menjadi sosok yang jauh lebih berani mengambil keputusan tanpa kehilangan kehangatan, serta memiliki tameng hati yang lebih kuat saat menerima kritikan.",
     checklist: [
-      "Minggu 1–2: Tentukan 3 batasan pribadi (waktu/energi/komunikasi).",
-      "Minggu 3–4: Latihan keputusan cepat: 3 keputusan kecil per minggu.",
-      "Minggu 5–6: Selesaikan 1 proyek 'cukup baik' sampai publish/launch.",
-      "Minggu 7–8: Bangun sistem feedback (mentor/teman review) 1x/minggu.",
-      "Minggu 9–10: Latihan menolak: minimal 2 'tidak' yang sopan.",
-      "Minggu 11–12: Evaluasi pemicu overthinking Anda dan strategi pencegahannya."
+      "Bulan 1: Tentukan 3 batasan pribadi Anda (kapan waktu istirahat, kapan boleh diganggu).",
+      "Bulan 1: Latih kemampuan mengambil keputusan cepat pada hal-hal kecil (seperti memilih menu makanan).",
+      "Bulan 2: Selesaikan 1 tugas/karya dengan prinsip 'Cukup Baik' tanpa harus merevisinya berkali-kali.",
+      "Bulan 2: Cari teman atau mentor yang bisa memberi Anda masukan positif setiap minggu.",
+      "Bulan 3: Belajar membela diri sendiri: praktikkan menolak ajakan dengan sopan jika sedang lelah.",
+      "Bulan 3: Evaluasi hal-hal apa saja yang sering membuat Anda overthinking, lalu kurangi paparan terhadap hal tersebut."
     ],
     suitableCareers: [
-      "Trainer, Guru, Coach (Non-klinis)",
-      "Content Writer/Strategist, PR",
-      "HR/People Development, Customer Success",
-      "MC/Presenter yang butuh kedalaman pesan",
-      "Konsultan Komunikasi"
+      "Pendidik, Mentor, atau Guru yang penyayang",
+      "Penulis, Kreator Konten, atau Pembuat Strategi",
+      "Pekerjaan di bidang Psikologi, Konseling, atau SDM",
+      "Pembawa acara (MC) yang membutuhkan kedalaman pesan",
+      "Peran yang menghubungkan empati dan komunikasi"
     ]
   },
   "S-P": {
-    title: "Sanguinis–Plegmatis (Pembawa Damai Sosial)",
-    summary: "Anda adalah pribadi yang hangat, santai, dan mudah membuat orang nyaman. Anda biasanya tidak suka konflik dan pandai menjaga suasana tetap enak. Anda kuat dalam relasi sosial yang ringan, pelayanan, dan menjadi 'teman yang menenangkan'. Catatan penting: Saat konflik/tekanan, sisi Plegmatis menguat (menghindar). Saat suasana menyenangkan, sisi Sanguinis menguat (ceria).",
+    title: "Sanguinis–Plegmatis (Sahabat yang Menenangkan)",
+    summary: "Anda adalah pribadi yang hangat, santai, dan selalu bisa membuat orang di sekitar merasa diterima. Anda sangat tidak suka keributan dan pandai menjaga suasana agar tetap damai. Orang lain menyukai Anda karena Anda adalah 'sahabat' yang asyik diajak bercanda, sekaligus pendengar yang sabar. Namun, ketika berhadapan dengan konflik atau tekanan, sisi Plegmatis Anda akan membuat Anda lebih memilih diam dan menghindar ketimbang menyelesaikannya.",
     decisionStyle: [
-      "Memilih yang paling minim gesekan.",
-      "Menunda keputusan agar tidak ada yang kecewa.",
-      "Butuh kebiasaan kecil untuk membangun ketegasan."
+      "Selalu memilih jalan yang paling aman dan minim gesekan dengan orang lain.",
+      "Sering menunda-nunda mengambil keputusan karena takut ada pihak yang kecewa.",
+      "Sangat membutuhkan dorongan atau rutinitas yang sederhana agar tidak terbawa arus teman."
     ],
     decisionGuide: [
-      "Tentukan 1 kriteria utama (waktu/biaya/kenyamanan).",
-      "Putuskan dalam batas waktu (mis. 24 jam).",
-      "Sampaikan keputusan tanpa banyak pembenaran."
+      "Tentukan 1 hal yang paling penting bagi ANDA hari ini (bukan bagi orang lain).",
+      "Untuk keputusan kecil, paksa diri Anda untuk memilih dalam waktu kurang dari 5 menit.",
+      "Untuk keputusan besar, beri batas waktu, dan pilihlah yang paling realistis untuk Anda jalani."
     ],
     emotionalDynamics: [
-      "Emosi stabil, tetapi bisa memendam ketidaknyamanan.",
-      "Cepat lelah di lingkungan yang keras atau penuh konflik.",
-      "Bisa merasa 'dipakai' jika terlalu sering mengalah."
+      "Kelihatan sangat tenang dan stabil, tetapi di dalam hati sering menahan perasaan agar tidak terjadi ribut-ribut.",
+      "Sangat cepat kehabisan energi bila berada di lingkungan yang kasar, penuh tekanan, atau saling bersaing.",
+      "Sering merasa 'dimanfaatkan' karena Anda terlalu sering mengalah demi kebaikan bersama."
     ],
-    stressSigns: ["Menunda", "Menghilang", "Pasif", "Bilang 'iya' tapi kesal"],
+    stressSigns: [
+      "Menunda-nunda pekerjaan (Prokrastinasi)", 
+      "Menghilang tiba-tiba (Susah dihubungi)", 
+      "Menjadi sangat pasif", 
+      "Bilang 'Iya' di depan, tapi kesal dan menggerutu di belakang"
+    ],
     interactionStyle: [
-      "Pendengar yang enak dan tidak menghakimi.",
-      "Mudah jadi tempat curhat.",
-      "Perlu melatih batas supaya tidak kebanjiran beban orang."
+      "Pendengar yang sangat enak, tulus, dan tidak suka menghakimi orang lain.",
+      "Tempat curhat nomor satu bagi teman-teman dan keluarga.",
+      "Sangat perlu melatih ketegasan agar Anda tidak kebanjiran menampung masalah/beban orang lain."
     ],
     interactionTips: [
-      "Saya bisa bantu, tapi kapasitas saya sampai sini.",
-      "Saya kurang nyaman dengan cara itu, saya lebih setuju cara ini."
+      "Aku mau bantu, tapi kemampuanku cuma sampai sini ya, sisanya kamu yang teruskan.",
+      "Aku kurang nyaman dengan pilihan itu. Aku lebih setuju kalau kita coba jalan yang ini."
     ],
     challenges: [
-      "Prokrastinasi (menunda mulai)",
-      "Sulit berkata tidak",
-      "Konflik dihindari sampai menumpuk",
-      "Arah pribadi kabur (terbawa arus)"
+      "Kebiasaan menunda-nunda pekerjaan sampai mepet waktu (Suka menggampangkan)",
+      "Sangat sulit berkata 'Tidak' pada permintaan orang lain",
+      "Memilih memendam masalah sampai akhirnya meledak atau menjadi stres sendiri",
+      "Tujuan hidup pribadi sering kabur karena terlalu sering mengikuti arus orang banyak"
     ],
-    conflictTrigger: "Pertengkaran, orang agresif, deadline mendadak.",
-    conflictStress: "Anda diam, menghindar, atau 'menghilang'.",
+    conflictTrigger: "Pertengkaran yang bising, orang yang agresif/memaksa, atau ditagih tugas secara mendadak.",
+    conflictStress: "Anda akan memilih untuk diam, menghindar, mencari alasan, atau 'menghilang' agar terhindar dari konfrontasi.",
     conflictSolution: [
-      "Bicara 1–1, singkat, langsung ke kebutuhan.",
-      "Sepakati aturan sederhana agar tidak berulang.",
-      "Tuliskan kesepakatan (1–3 poin)."
+      "Ajak bicara empat mata, bukan di depan banyak orang.",
+      "Bicarakan intinya dengan santai: apa yang membuat tidak nyaman dan apa yang diharapkan.",
+      "Sepakati satu aturan sederhana agar masalah tersebut tidak terulang lagi."
     ],
     recommendations: [
-      "Hari 1–3 (Otot keputusan): putuskan 1 hal kecil per hari tanpa 'terserah'.",
-      "Hari 4–6 (Batasan): tulis 3 batasan; sampaikan 1 dengan sopan.",
-      "Hari 7–10 (Mulai kerja): aturan 10 menit—mulai dulu 10 menit tiap hari.",
-      "Hari 11–14 (Arah): tulis 3 tujuan 90 hari + langkah minggu ini."
+      "Hari 1–3 (Otot Keputusan): Berhentilah berkata 'Terserah'. Paksakan diri memilih 1 hal setiap hari secara tegas.",
+      "Hari 4–6 (Tembok Pertahanan): Tulis 3 hal yang tidak ingin Anda lakukan, lalu praktikkan menolak permintaan tersebut dengan sopan.",
+      "Hari 7–10 (Prinsip 10 Menit): Jangan tunggu mood. Paksakan diri memulai tugas selama 10 menit saja setiap harinya.",
+      "Hari 11–14 (Arah Pribadi): Tulis 1 impian yang murni keinginan Anda sendiri, bukan titipan dari orang tua atau teman."
     ],
-    direction: "Dalam 2–4 minggu, Anda lebih tegas, lebih produktif, lebih terlindungi dari dimanfaatkan, dan tetap hangat.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan menjadi sosok yang jauh lebih tegas dan teratur, tidak lagi mudah dimanfaatkan orang lain, namun tetap menjadi sosok sahabat yang hangat dan menyenangkan.",
     checklist: [
-      "Minggu 1–2: Buat '3 prioritas hidup/kerja' yang jelas.",
-      "Minggu 3–4: Latihan batasan: 2 kali menolak permintaan non-prioritas.",
-      "Minggu 5–6: Selesaikan 1 proyek kecil sampai tuntas.",
-      "Minggu 7–8: Latihan konflik sehat: selesaikan 1 isu kecil lewat obrolan 10 menit.",
-      "Minggu 9–10: Rapikan sistem harian (3 tugas/hari + jam fokus).",
-      "Minggu 11–12: Evaluasi relasi: perkuat yang sehat, batasi yang menguras."
+      "Bulan 1: Buat daftar '3 Prioritas Saya' yang harus didahulukan sebelum membantu orang lain.",
+      "Bulan 1: Latih otot ketegasan: Praktikkan berkata 'Tidak' minimal 2 kali dalam minggu ini.",
+      "Bulan 2: Selesaikan 1 tugas, hobi, atau proyek sederhana sampai benar-benar tuntas.",
+      "Bulan 2: Berlatih menghadapi konflik sehat. Jangan dipendam; tegur teman dengan baik jika ia salah.",
+      "Bulan 3: Rapikan jadwal sehari-hari. Batasi waktu rebahan, tentukan jam untuk benar-benar fokus mengerjakan tugas.",
+      "Bulan 3: Seleksi pertemanan Anda. Perkuat pertemanan yang saling mendukung, dan kurangi waktu dengan teman yang hanya memanfaatkan kebaikan Anda."
     ],
     suitableCareers: [
-      "Customer Service, Community Support",
-      "Hospitality, HR Support",
-      "Event Support, Liaison",
-      "Admin Koordinasi Ringan"
+      "Layanan Pelanggan (Customer Service) atau Humas",
+      "Pekerjaan Sosial atau Tenaga Medis (Perawat/Pendamping)",
+      "Dukungan Administrasi yang tidak penuh tekanan",
+      "Pekerjaan di bidang perhotelan atau pariwisata",
+      "Pekerjaan yang berfokus pada melayani dan menolong sesama"
     ]
   },
   "M-S": {
-    title: "Melankolis–Sanguinis (Perfeksionis yang Sosial)",
-    summary: "Anda punya standar tinggi dan mata yang jeli, namun juga mampu menyampaikan dengan menarik. Anda bisa menjadi 'penjaga kualitas' sekaligus komunikator yang membuat orang paham. Anda kuat dalam kualitas, edukasi, dan komunikasi yang meyakinkan.",
+    title: "Melankolis–Sanguinis (Si Pemikir yang Ramah)",
+    summary: "Anda memiliki kombinasi yang unik: di satu sisi Anda punya standar yang sangat tinggi dan ketelitian yang tajam (Melankolis), namun di sisi lain Anda mampu menyampaikannya dengan gaya yang ramah dan menarik (Sanguinis). Anda bisa menjadi 'penjaga kualitas' yang hebat, sekaligus menjadi orang yang dipercaya untuk membimbing teman-teman agar paham. Anda kuat dalam mengatur, menganalisa, sekaligus berkomunikasi.",
     decisionStyle: [
-      "Ingin keputusan yang benar dan rapi, bukan sekadar cepat.",
-      "Bisa memperpanjang revisi demi hasil terbaik.",
-      "Butuh batas revisi agar tidak habis tenaga."
+      "Menginginkan keputusan yang benar, rapi, dan terbukti, bukan sekadar asal cepat selesai.",
+      "Sering mengulang atau memperbaiki (revisi) sesuatu berkali-kali demi mencapai hasil yang paling sempurna.",
+      "Sangat butuh batas toleransi agar tidak kehabisan waktu dan tenaga untuk hal yang sebenarnya sudah cukup bagus."
     ],
     decisionGuide: [
-      "Tentukan target + deadline.",
-      "Tentukan batas revisi (mis. 2 kali).",
-      "Buat draft cepat, lalu rapikan bertahap."
+      "Tentukan target akhirnya seperti apa, dan kapan batas waktunya (deadline).",
+      "Batasi jumlah perbaikan/revisi (misalnya: 'Aku hanya akan mengedit tugas ini maksimal 2 kali').",
+      "Kerjakan draft atau coret-coretan dasarnya dengan cepat dulu, baru dirapikan sedikit demi sedikit."
     ],
     emotionalDynamics: [
-      "Bisa ramah di luar, tapi mudah tersentuh bila usaha Anda tidak dihargai.",
-      "Keras pada diri sendiri dan mudah merasa 'kurang'.",
-      "Saat lelah, kritik internal Anda meningkat."
+      "Di luar Anda terlihat ramah dan mudah bergaul, tapi batin Anda mudah tersentuh jika kerja keras Anda tidak dihargai.",
+      "Sangat keras pada diri sendiri dan mudah merasa 'Saya masih kurang bagus'.",
+      "Saat kelelahan, suara kritik di kepala Anda akan menjadi sangat keras dan mengganggu."
     ],
-    stressSigns: ["Perfeksionisme naik", "Sulit puas", "Gampang kesal pada hal kecil"],
+    stressSigns: [
+      "Menjadi sangat perfeksionis pada hal yang tidak penting", 
+      "Sangat sulit merasa puas", 
+      "Mudah kesal atau marah pada hal-hal kecil yang tidak sesuai rencana",
+      "Merasa pesimis"
+    ],
     interactionStyle: [
-      "Bisa menjelaskan hal rumit dengan cara yang menarik.",
-      "Bisa memberi kritik yang tepat, namun perlu pengantar agar tidak terasa menyerang.",
-      "Efektif saat menyeimbangkan kualitas dan hubungan."
+      "Sangat hebat dalam menjelaskan hal-hal yang rumit menjadi cerita yang menarik dan mudah dipahami.",
+      "Bisa memberikan kritikan yang sangat akurat, namun terkadang terdengar tajam bagi orang yang perasa.",
+      "Akan sangat luar biasa jika Anda menyeimbangkan antara memuji dan mengoreksi teman."
     ],
     interactionTips: [
-      "Saya apresiasi bagian ini. Ada 1–2 poin yang kita rapikan agar hasilnya lebih kuat.",
-      "Saya fokus pada prosesnya, bukan menyalahkan orangnya."
+      "Aku sangat menghargai usahamu di bagian ini. Supaya hasilnya lebih sempurna, yuk kita rapikan bagian yang satunya lagi.",
+      "Aku lagi bahas tugas/masalahnya ya, bukan bermaksud menyalahkan kamu secara pribadi."
     ],
     challenges: [
-      "Perfeksionisme menghambat selesai",
-      "Kritik terdengar tajam",
-      "Overthinking kualitas vs waktu",
-      "Mudah lelah mental"
+      "Rasa ingin sempurna (perfeksionisme) yang membuat pekerjaan tidak pernah selesai",
+      "Kritikan Anda kadang terdengar seperti serangan bagi orang lain",
+      "Terlalu banyak menimbang antara ingin kualitas yang bagus vs waktu yang mepet",
+      "Mudah lelah secara mental karena terlalu memikirkan detail"
     ],
-    conflictTrigger: "Kerja asal-asalan, orang abai detail, deadline sempit.",
-    conflictStress: "Anda makin detail, makin kritis, dan sulit percaya orang.",
+    conflictTrigger: "Melihat orang yang bekerja asal-asalan, teman yang tidak peduli pada detail, atau waktu yang terlalu sempit untuk menyelesaikan tugas.",
+    conflictStress: "Anda akan menjadi semakin kaku, sangat kritis terhadap orang sekitar, dan mulai sulit mempercayai orang lain untuk membantu Anda.",
     conflictSolution: [
-      "Tulis standar minimal yang disepakati.",
-      "Perbaiki 1–2 hal paling berdampak dulu.",
-      "Buat rencana perbaikan + checkpoint."
+      "Sepakati dulu standar minimalnya bersama kelompok (tidak harus 100% sempurna).",
+      "Fokus perbaiki 1 atau 2 hal yang paling penting saja, biarkan hal kecil lainnya.",
+      "Buat rencana kerja yang jelas agar semua orang tahu apa yang harus diperbaiki."
     ],
     recommendations: [
-      "Hari 1–3 (Definisi cukup baik): buat 3 level kualitas: cukup/baik/istimewa.",
-      "Hari 4–6 (Batas revisi): maksimal 2 revisi untuk 1 pekerjaan.",
-      "Hari 7–10 (Masukan yang aman): selalu mulai dengan 1 apresiasi spesifik.",
-      "Hari 11–14 (Rawat energi): 30 menit/hari tanpa layar + tidur konsisten."
+      "Hari 1–3 (Belajar Menerima 'Cukup'): Buat 3 level kualitas: 'Cukup', 'Baik', dan 'Sempurna'. Mulailah menerima kenyataan bahwa banyak hal di dunia ini hanya butuh level 'Cukup'.",
+      "Hari 4–6 (Batas Toleransi): Berlatihlah menahan diri. Berikan maksimal 2 kali revisi untuk 1 tugas, setelah itu harus Anda lepaskan/kumpulkan.",
+      "Hari 7–10 (Mengkritik dengan Elegan): Biasakan selalu memulai kalimat dengan 1 pujian spesifik sebelum Anda memberikan koreksi kepada teman.",
+      "Hari 11–14 (Rawat Pikiran): Luangkan waktu 30 menit setiap hari tanpa memegang HP atau memikirkan tugas, demi ketenangan batin Anda."
     ],
-    direction: "Dalam 2–4 minggu, Anda tetap unggul di kualitas, namun lebih cepat selesai, lebih ringan, dan hubungan kerja lebih nyaman.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang cerdas dan teliti, namun pekerjaan Anda akan lebih cepat selesai, pikiran lebih ringan, dan orang-orang akan lebih nyaman bekerja dengan Anda.",
     checklist: [
-      "Minggu 1–2: Tetapkan standar minimal untuk 3 jenis tugas utama.",
-      "Minggu 3–4: Buat template kerja (brief, checklist, format review).",
-      "Minggu 5–6: Latih komunikasi koreksi: puji–koreksi–arah (konsisten).",
-      "Minggu 7–8: Selesaikan 1 proyek besar dengan batas revisi.",
-      "Minggu 9–10: Delegasikan 10% detail yang bukan 'high impact'.",
-      "Minggu 11–12: Evaluasi energi: rapikan rutinitas istirahat dan jam fokus."
+      "Bulan 1: Tetapkan standar 'Minimal Selesai' untuk tugas sehari-hari agar Anda tidak kehabisan waktu.",
+      "Bulan 1: Siapkan template atau daftar periksa (checklist) agar Anda tidak perlu mengingat semuanya di kepala.",
+      "Bulan 2: Berlatih pola komunikasi: Puji dulu, baru beri masukan, lalu tutup dengan kalimat penyemangat.",
+      "Bulan 2: Belajar menyelesaikan satu tugas/karya tanpa harus merevisinya sampai sempurna.",
+      "Bulan 3: Belajar membagi tugas. Delegasikan hal-hal kecil kepada orang lain dan percayakan pada mereka.",
+      "Bulan 3: Evaluasi jam tidur dan waktu istirahat Anda. Jangan korbankan kesehatan hanya demi hasil yang sempurna."
     ],
     suitableCareers: [
-      "Editor, QA Lead",
-      "Trainer/Educator Detail",
-      "Content Strategist, Brand Komunikasi",
-      "Project Manager (Komunikasi Stakeholder)",
-      "Instructional Designer"
+      "Editor, Pengawas Kualitas (Quality Control), atau Peneliti",
+      "Guru, Dosen, atau Pelatih yang butuh ketelitian",
+      "Pembuat Konten Strategis atau Desainer",
+      "Manajer Proyek (Terutama dalam mengelola komunikasi kelompok)",
+      "Pekerjaan yang memadukan analisa data dan presentasi (Bussiness Analyst)"
     ]
   },
   "M-K": {
-    title: "Melankolis–Koleris (Manajer Sistematis)",
-    summary: "Anda adalah kombinasi yang kuat untuk membangun mesin kerja: cepat, tegas, rapi, dan terukur. Anda melihat ketidakrapian, ketidakadilan, atau cara kerja yang tidak efektif—lalu terdorong untuk membenahi sampai 'beres'. Anda biasanya dihormati karena kompeten, tegas, dan konsisten.",
+    title: "Melankolis–Koleris (Si Pengatur yang Teliti)",
+    summary: "Anda adalah perpaduan luar biasa antara ketelitian dan ketegasan. Di mata orang lain, Anda adalah sosok yang selalu bisa diandalkan untuk 'membereskan kekacauan'. Anda tidak hanya suka bekerja dengan cepat, tapi juga memastikannya rapi dan terukur. Jika ada tugas kelompok atau proyek yang berantakan, Anda adalah orang pertama yang tahu cara memperbaikinya dan memimpin yang lain untuk bergerak.",
     decisionStyle: [
-      "Percaya pada prinsip, data, dan struktur.",
-      "Memikirkan 'apa yang bisa salah' agar sistem aman.",
-      "Suka keputusan tegas daripada diskusi panjang."
+      "Sangat percaya pada prinsip, aturan yang jelas, dan data atau fakta yang ada.",
+      "Selalu memikirkan 'apa hal terburuk yang bisa terjadi' agar semuanya tetap aman terkendali.",
+      "Lebih suka mengambil keputusan yang tegas daripada harus berdebat dan membuang waktu."
     ],
     decisionGuide: [
-      "Definisikan hasil akhir (output harus seperti apa).",
-      "Tetapkan standar minimal (wajib) vs standar ideal (bonus).",
-      "Putuskan 1 rute terbaik dan jalankan.",
-      "Evaluasi dengan data di minggu berikutnya."
+      "Tentukan dulu hasil akhirnya harus seperti apa (bayangkan hasil yang diinginkan).",
+      "Buat standar minimal yang wajib dicapai, dan standar ideal sebagai bonus jika ada waktu sisa.",
+      "Pilih satu rute terbaik dan langsung jalankan tanpa banyak keraguan.",
+      "Evaluasi hasilnya di akhir, jangan terlalu banyak mengubah arah di tengah jalan."
     ],
     emotionalDynamics: [
-      "Jarang menampakkan emosi; menyalurkan lewat tindakan koreksi.",
-      "Mudah frustrasi jika melihat kesalahan berulang atau orang tidak serius.",
-      "Bisa kelelahan karena memegang terlalu banyak hal 'agar aman'."
+      "Jarang memperlihatkan emosi secara langsung; Anda lebih suka menyalurkannya lewat tindakan atau bekerja lebih keras.",
+      "Sangat mudah merasa gemas atau frustrasi jika melihat teman mengulang kesalahan yang sama atau tidak serius.",
+      "Terkadang bisa merasa sangat kelelahan secara batin karena merasa harus mengurus semuanya sendirian 'agar hasilnya aman'."
     ],
-    stressSigns: ["Nada bicara makin tajam", "Sulit tidur (skenario berputar)", "Sinis ('Percuma dijelaskan')"],
+    stressSigns: [
+      "Nada bicara menjadi lebih tajam dan ketus", 
+      "Sulit tidur karena memikirkan tugas yang belum sempurna", 
+      "Menjadi sinis (merasa 'percuma dijelaskan, mending kerjakan sendiri')", 
+      "Mulai mengatur hal-hal kecil dari pekerjaan orang lain"
+    ],
     interactionStyle: [
-      "Jelas, tegas, tidak bertele-tele.",
-      "Memberi arah yang membuat orang tahu harus apa.",
-      "Perlu diseimbangkan: orang tidak selalu menolak standar Anda, kadang hanya tidak paham."
+      "Bicara sangat jelas, tegas, dan tidak suka bertele-tele.",
+      "Pintar memberikan arahan sehingga orang tahu persis apa yang harus mereka lakukan.",
+      "Kadang lupa memberikan apresiasi/pujian karena terlalu fokus pada apa yang belum sempurna."
     ],
     interactionTips: [
-      "Ini standar minimalnya, supaya aman. Setelah itu kita rapikan bertahap.",
-      "Saya fokus ke hasil dan prosesnya, bukan menyalahkan orangnya."
+      "Ini standar minimal yang kita butuhkan ya, supaya aman. Nanti kalau ada waktu, baru kita buat lebih bagus lagi.",
+      "Aku lagi bahas cara kerja kita, bukan bermaksud menyalahkan kamu secara pribadi ya."
     ],
     challenges: [
-      "Kaku dan sulit kompromi",
-      "Perfeksionisme menghambat selesai",
-      "Terlalu kritis (ke diri dan orang lain)",
-      "Sulit melepas kontrol (micromanage)"
+      "Terkadang terlihat terlalu kaku dan sulit diajak kompromi",
+      "Sikap perfeksionis yang membuat pekerjaan malah lambat selesai",
+      "Terlalu kritis (baik kepada diri sendiri maupun kepada orang lain)",
+      "Sulit percaya pada orang lain sehingga selalu ingin mengatur cara kerja mereka"
     ],
-    conflictTrigger: "Ketidakadilan, kerja asal-asalan, tim tidak disiplin, aturan berubah tanpa alasan.",
-    conflictStress: "Anda meningkatkan kontrol, memperketat standar, dan cenderung memotong diskusi.",
+    conflictTrigger: "Ketidakadilan, orang yang kerja asal-asalan, teman yang tidak disiplin, atau aturan yang tiba-tiba diubah tanpa alasan jelas.",
+    conflictStress: "Anda akan mengambil alih kendali, memperketat aturan, dan cenderung memotong pembicaraan orang lain yang dianggap hanya alasan.",
     conflictSolution: [
-      "Nyatakan fakta (tanpa label pribadi).",
-      "Jelaskan dampak (biaya/waktu/risiko).",
-      "Solusi: 1 tindakan jelas + PIC + tenggat + standar minimal."
+      "Sampaikan fakta dari masalah tersebut tanpa melabeli atau menyerang karakter orangnya.",
+      "Jelaskan dampaknya (misalnya: 'Kalau begini, waktu kita jadi terbuang...').",
+      "Berikan solusi langsung: 1 tindakan jelas, siapa yang mengerjakan, dan kapan harus selesai."
     ],
     recommendations: [
-      "Hari 1–3: Pisahkan tugas Wajib vs Ideal (selesaikan Wajib dulu).",
-      "Hari 4–6: Gunakan pola kritik: apresiasi → koreksi → langkah berikutnya.",
-      "Hari 7–10: Delegasikan 1 hal dengan tujuan, standar minimal, dan tenggat.",
-      "Hari 11–14: Buat 'jam tenang' 30 menit/hari tanpa layar."
+      "Hari 1–3 (Pilah Prioritas): Pisahkan mana tugas yang 'Wajib Selesai' dan mana yang 'Bagus Kalau Selesai'. Kerjakan yang wajib dulu.",
+      "Hari 4–6 (Latihan Memuji): Gunakan pola ini saat mengkritik teman: Beri 1 pujian → Beri koreksi → Beri semangat.",
+      "Hari 7–10 (Belajar Percaya): Berikan 1 tugas kepada teman/anggota keluarga. Jelaskan hasil yang Anda mau, tapi biarkan mereka mengerjakannya dengan cara mereka sendiri.",
+      "Hari 11–14 (Waktu Jeda): Buat 'Jam Tenang' 30 menit setiap hari tanpa menyentuh pekerjaan atau layar HP."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya tetap tegas dan berkualitas, tetapi lebih cepat selesai, konflik turun, dan energi mental lebih stabil.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang tegas dan menghasilkan karya berkualitas, namun Anda akan lebih cepat selesai, lebih jarang berdebat, dan energi mental Anda jauh lebih stabil.",
     checklist: [
-      "Minggu 1–2: Tetapkan 3 KPI sederhana untuk tim/pekerjaan Anda.",
-      "Minggu 3–4: Dokumentasikan SOP inti (1 halaman per proses).",
-      "Minggu 5–6: Delegasi 1 proses + latih 1 orang jadi penanggung jawab.",
-      "Minggu 7–8: Rapikan pola rapat: agenda tetap + keputusan tertulis.",
-      "Minggu 9–10: Evaluasi beban: apa yang bisa dilepas 20% lagi.",
-      "Minggu 11–12: Review hasil KPI + perbaiki 1 bottleneck terbesar."
+      "Bulan 1: Tentukan 3 target utama yang paling penting untuk kehidupan/pendidikan Anda saat ini.",
+      "Bulan 1: Buat daftar periksa (checklist) sederhana agar Anda tidak perlu mengingat semuanya.",
+      "Bulan 2: Belajar percaya pada orang lain dengan mendelegasikan 1 tugas rutin kepada teman atau saudara.",
+      "Bulan 2: Berlatih memimpin rapat/diskusi yang lebih ramah dengan menyisipkan sedikit senyum dan apresiasi.",
+      "Bulan 3: Evaluasi beban kerja Anda: apa 20% tugas yang sebenarnya bisa Anda kurangi agar tidak terlalu stres?",
+      "Bulan 3: Rapikan kembali waktu tidur dan istirahat yang sering terkorbankan."
     ],
     suitableCareers: [
-      "Manajer Operasional, Head of Process/SOP",
-      "QA/QC Lead, Audit, Risk Management",
-      "Product/Ops Lead",
-      "Konsultan Perbaikan Sistem",
-      "Project Manager (Tipe Eksekusi)"
+      "Manajer Operasional atau Pengawas Kualitas (QA/QC)",
+      "Auditor, Akuntan, atau Analis Risiko",
+      "Pemimpin Proyek atau Ketua Organisasi",
+      "Konsultan Sistem dan Perbaikan",
+      "Pekerjaan yang menuntut ketertiban, logika, dan penyelesaian masalah"
     ]
   },
   "M-P": {
-    title: "Melankolis–Plegmatis (Pemikir Tenang)",
-    summary: "Anda tenang, teliti, dan cenderung memproses sesuatu dengan mendalam. Anda bukan tipe yang mencari sorotan; Anda lebih suka memastikan semuanya aman, rapi, dan tidak menyakiti siapa pun. Anda kuat di konsistensi, analisis yang matang, dan menjaga stabilitas.",
+    title: "Melankolis–Plegmatis (Pemikir yang Tenang)",
+    summary: "Anda adalah pribadi yang tenang, teliti, dan cenderung memproses segala sesuatu dengan sangat mendalam. Anda bukan tipe orang yang mencari panggung atau sorotan; Anda lebih suka memastikan semuanya berjalan aman, rapi, dan tidak ada yang tersakiti. Di lingkungan Anda, Anda adalah 'penjaga' yang konsisten, penganalisa yang matang, dan sangat menyukai kedamaian.",
     decisionStyle: [
-      "Memikirkan risiko dan dampak jangka panjang.",
-      "Butuh waktu untuk merasa yakin.",
-      "Bisa terjebak 'tunggu siap dulu' sampai akhirnya tidak mulai."
+      "Selalu memikirkan risiko dan dampak panjang sebelum bertindak.",
+      "Sangat butuh waktu dan data yang cukup untuk merasa yakin.",
+      "Sering terjebak dalam pemikiran 'Tunggu aku siap dulu ya', sampai akhirnya malah tidak jadi memulai."
     ],
     decisionGuide: [
-      "Tentukan batas waktu keputusan (mis: 24 jam).",
-      "Pilih opsi yang 'cukup aman' dulu.",
-      "Jalankan langkah pertama yang kecil.",
-      "Evaluasi setelah jalan (data kecil lebih menenangkan)."
+      "Tentukan batas waktu untuk mengambil keputusan (misalnya: 'Besok pagi harus sudah ada jawaban').",
+      "Pilih pilihan yang menurut Anda 'cukup aman' untuk saat ini.",
+      "Jalankan langkah pertama yang paling kecil dan paling ringan.",
+      "Evaluasi setelah berjalan (biasanya, setelah dicoba, rasa takut Anda akan hilang dengan sendirinya)."
     ],
     emotionalDynamics: [
-      "Sensitif, tetapi jarang memperlihatkannya.",
-      "Bisa memendam kecewa, lalu pelan-pelan menjauh.",
-      "Overthinking muncul ketika Anda kelelahan atau merasa tidak aman."
+      "Sangat perasa dan sensitif, tetapi Anda sangat jarang memperlihatkannya kepada orang lain.",
+      "Sering memendam kekecewaan, lalu pelan-pelan menjauh dari orang yang menyakiti Anda tanpa berniat ribut.",
+      "Kebiasaan 'Overthinking' (memikirkan hal secara berlebihan) sering muncul saat Anda kelelahan atau merasa kurang aman."
     ],
-    stressSigns: ["Menunda hal kecil", "Sulit fokus", "Badan lelah tapi pikiran tidak berhenti"],
+    stressSigns: [
+      "Menunda-nunda hal kecil", 
+      "Sulit fokus pada saat diajak bicara", 
+      "Badan terasa sangat lelah tapi pikiran tidak bisa berhenti berputar", 
+      "Mengurung diri dari keramaian"
+    ],
     interactionStyle: [
-      "Pendengar yang kuat; orang merasa aman bercerita.",
-      "Cenderung menghindari konflik, bahkan ketika tidak setuju.",
-      "Sering terlihat 'baik-baik saja' padahal sedang berat."
+      "Pendengar yang sangat kuat; orang lain merasa aman dan nyaman saat bercerita pada Anda.",
+      "Cenderung menghindari keributan, bahkan sering diam saja meskipun sebenarnya Anda tidak setuju.",
+      "Sering terlihat 'baik-baik saja' dari luar, padahal di dalam hati sedang memikirkan banyak beban."
     ],
     interactionTips: [
-      "Saya butuh waktu sebentar untuk memikirkan ini, besok saya jawab.",
-      "Saya kurang nyaman dengan opsi itu. Saya lebih setuju opsi ini karena…"
+      "Beri aku waktu sebentar untuk memikirkan hal ini ya, nanti aku kabari lagi.",
+      "Aku kurang nyaman sama pilihan itu. Menurutku lebih baik begini karena..."
     ],
     challenges: [
-      "Menunda karena kebanyakan mempertimbangkan",
-      "Sulit menyampaikan kebutuhan/ketidaksetujuan",
-      "Mudah lelah mental (overthinking)",
-      "Terlalu mengalah lalu kecewa"
+      "Sering menunda pekerjaan karena terlalu lama mempertimbangkan banyak hal",
+      "Sangat sulit menyampaikan kebutuhan diri sendiri atau rasa tidak setuju",
+      "Mudah kehabisan energi mental karena terlalu banyak overthinking",
+      "Terlalu sering mengalah yang akhirnya membuat diri sendiri kecewa"
     ],
-    conflictTrigger: "Perubahan mendadak, suasana keras, konflik terbuka, tenggat sempit.",
-    conflictStress: "Anda cenderung diam, menghindar, dan menumpuk beban sendiri.",
+    conflictTrigger: "Perubahan rencana yang serba mendadak, suasana yang kasar, pertengkaran terbuka, atau waktu (deadline) yang terlalu mepet.",
+    conflictStress: "Anda akan memilih untuk diam, menghindar, mencari tempat sepi, dan menumpuk semua beban tersebut di kepala Anda sendiri.",
     conflictSolution: [
-      "Bicara 1–1, bukan di depan banyak orang.",
-      "Sampaikan 1 poin inti (jangan semua sekaligus).",
-      "Buat kesepakatan kecil yang jelas dan realistis."
+      "Jangan langsung menghindar, bicaralah berdua saja di tempat yang tenang (bukan di depan banyak orang).",
+      "Sampaikan 1 hal yang paling mengganjal di hati Anda (jangan bahas semua masalah sekaligus).",
+      "Buatlah kesepakatan kecil yang jelas dan realistis agar Anda kembali merasa aman."
     ],
     recommendations: [
-      "Hari 1–3 (Anti menunda): Ambil 1 tugas tertunda, pecah jadi langkah 10 menit.",
-      "Hari 4–6 (Suara Anda): Ucapkan 1 preferensi tiap hari ('Saya pilih A').",
-      "Hari 7–10 (Kelola overthinking): Tulis Fakta vs Kekhawatiran.",
-      "Hari 11–14 (Batasan lembut): Sampaikan 1 batasan kapasitas/waktu."
+      "Hari 1–3 (Anti Menunda): Ambil 1 tugas yang paling sering Anda tunda, lalu pecah menjadi langkah kecil. Kerjakan 10 menit saja hari ini.",
+      "Hari 4–6 (Latihan Bersuara): Ucapkan 1 pilihan Anda tiap hari (misalnya: 'Hari ini aku mau makan ini', jangan jawab 'Terserah').",
+      "Hari 7–10 (Kelola Pikiran): Saat overthinking, tuliskan di kertas: Mana yang 'Fakta' dan mana yang cuma 'Ketakutan di kepala saya'.",
+      "Hari 11–14 (Batas Lembut): Sampaikan 1 batasan Anda kepada teman (misalnya: 'Maaf ya, aku kalau malam sudah tidak buka tugas')."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya lebih berani mulai, lebih jelas bersuara, dan tidak mudah terkuras oleh pikiran berulang.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan lebih berani untuk memulai sesuatu, lebih jelas dalam menyuarakan keinginan, dan tidak lagi mudah terkuras oleh pikiran yang berputar-putar.",
     checklist: [
-      "Minggu 1–2: Bangun rutinitas harian 3 hal (tidur, gerak, fokus 30 menit).",
-      "Minggu 3–4: Latih keputusan cepat untuk hal kecil (1 keputusan/hari).",
-      "Minggu 5–6: Sampaikan 1 kebutuhan/pekan ke orang relevan.",
-      "Minggu 7–8: Ambil 1 proyek mini dan selesaikan sampai tuntas.",
-      "Minggu 9–10: Belajar 1 skill komunikasi: 'setuju/tidak setuju dengan sopan'.",
-      "Minggu 11–12: Review pemicu menunda, desain pencegahannya."
+      "Bulan 1: Bangun kebiasaan harian yang stabil (waktu tidur yang cukup, bergerak santai, dan fokus tugas 30 menit).",
+      "Bulan 1: Latih otot keputusan cepat untuk hal-hal sepele (maksimal 1 menit untuk memilih).",
+      "Bulan 2: Sampaikan 1 hal yang Anda butuhkan kepada orang terdekat Anda setiap minggu.",
+      "Bulan 2: Ambil 1 proyek/tugas kelompok dan tantang diri Anda untuk menyelesaikannya tepat waktu tanpa menunggu 'sempurna'.",
+      "Bulan 3: Belajar trik komunikasi: 'Menolak atau tidak setuju dengan wajah tersenyum dan nada sopan'.",
+      "Bulan 3: Amati apa saja yang memicu Anda overthinking, dan kurangi hal tersebut (misal: kurangi main media sosial di malam hari)."
     ],
     suitableCareers: [
-      "Analis (Data/Bisnis), Peneliti",
-      "QA, Editor, Dokumentasi",
-      "Finance/Back Office",
-      "Customer Support Level Lanjut",
-      "Mediator Internal"
+      "Analis (Data/Bisnis/Sistem) atau Peneliti",
+      "Admin, Keuangan, atau Editor",
+      "Penulis atau Pembuat Dokumentasi",
+      "Layanan Pelanggan tingkat lanjut (yang butuh penyelesaian masalah)",
+      "Pekerjaan yang butuh ketelitian tinggi dan ketenangan"
     ]
   },
   "K-S": {
-    title: "Koleris–Sanguinis (Penggerak Ekstrovert)",
-    summary: "Anda adalah penggerak: cepat, berani, tegas, dan punya energi sosial yang kuat. Anda nyaman memimpin, mendorong target, dan membuat orang bergerak. Anda sering jadi sumber momentum di tim—ketika orang lain ragu, Anda maju dulu.",
+    title: "Koleris–Sanguinis (Penggerak yang Karismatik)",
+    summary: "Anda adalah sosok penggerak sejati: berani, bertindak cepat, tegas, namun juga memiliki energi sosial yang sangat kuat dan ceria. Anda sangat nyaman saat diminta memimpin kelompok, merancang target, dan menyemangati teman-teman untuk bergerak. Di mana ada Anda, di situ ada momentum. Saat orang lain masih ragu-ragu, Anda adalah orang pertama yang berani melangkah maju.",
     decisionStyle: [
-      "Fokus hasil: 'targetnya apa, kapan selesai'.",
-      "Suka solusi cepat dan jalan paling efisien.",
-      "Kurang sabar dengan proses yang lambat atau terlalu banyak diskusi."
+      "Sangat fokus pada hasil: 'Tujuannya apa? Kapan harus selesai?'.",
+      "Suka mencari jalan paling efisien dan cepat.",
+      "Sangat tidak sabar menghadapi proses yang lambat atau orang yang terlalu banyak berteori tanpa tindakan."
     ],
     decisionGuide: [
-      "Tetapkan target (angka/kondisi jelas).",
-      "Tentukan strategi 80/20 (paling berdampak).",
-      "Jalankan cepat.",
-      "Lakukan evaluasi terjadwal."
+      "Tetapkan target yang sangat jelas (kondisi atau angkanya harus pasti).",
+      "Pilih cara yang paling cepat memberikan dampak terbesar.",
+      "Langsung jalankan langkah pertama.",
+      "Lakukan pengecekan rutin (evaluasi) untuk memastikan tidak ada yang terlewat."
     ],
     emotionalDynamics: [
-      "Frustrasi saat orang lambat/tidak kompeten.",
-      "Tidak suka terlihat lemah, jarang menunjukkan capek.",
-      "Bisa menyesal setelah berkata terlalu keras."
+      "Mudah merasa gemas atau frustrasi saat menghadapi teman/orang yang lambat atau tidak kompeten.",
+      "Sangat gengsi untuk terlihat lemah, sehingga Anda jarang mau menunjukkan rasa capek atau sedih.",
+      "Terkadang bisa merasa menyesal setelah marah atau berbicara terlalu keras kepada orang lain."
     ],
-    stressSigns: ["Sering memotong orang", "Nada naik", "Keputusan makin nekat"],
+    stressSigns: [
+      "Sering memotong pembicaraan orang", 
+      "Nada suara otomatis meninggi", 
+      "Mulai mengambil keputusan dengan nekat", 
+      "Terlihat terburu-buru dan tidak sabaran"
+    ],
     interactionStyle: [
-      "Karismatik dan kuat memimpin ruang.",
-      "Bisa membuat orang merasa 'dibawa', tapi juga bisa 'didikte'.",
-      "Paling efektif saat memberi ruang orang lain untuk ikut memiliki keputusan."
+      "Punya karisma yang kuat dan mudah mendominasi ruang obrolan.",
+      "Sangat jago membuat orang lain 'terbawa suasana' dan mengikuti ide Anda.",
+      "Akan jauh lebih disukai jika Anda mau memberikan sedikit ruang agar orang lain juga merasa idenya didengar."
     ],
     interactionTips: [
-      "Saya ingin dengar masukan Anda dulu sebelum saya putuskan.",
-      "Apa risiko terbesar menurut Anda?"
+      "Aku pengen denger masukan kalian dulu nih, sebelum kita putusin bareng-bareng.",
+      "Menurut kamu, kira-kira ada risiko apa yang mungkin kita lewatin?"
     ],
     challenges: [
-      "Terlalu dominan / kurang mendengar",
-      "Mengorbankan relasi demi target",
-      "Melewatkan detail",
-      "Marah cepat (meski cepat reda)"
+      "Terlalu mendominasi sehingga sering lupa mendengarkan ide dari orang lain",
+      "Kadang mengorbankan perasaan teman demi mencapai target yang diinginkan",
+      "Sering melewatkan hal-hal kecil dan detail penting",
+      "Cepat marah (meskipun sebenarnya Anda juga sangat cepat memaafkan/lupa)"
     ],
-    conflictTrigger: "Lambat, bertele-tele, tidak jelas, tidak bertanggung jawab.",
-    conflictStress: "Anda mempercepat dengan tekanan; sebagian orang jadi takut dan menutup diri.",
+    conflictTrigger: "Orang yang lamban, kerja yang bertele-tele, teman yang banyak alasan, atau orang yang tidak mau bertanggung jawab.",
+    conflictStress: "Anda akan mempercepat segalanya dengan memberikan tekanan keras. Akibatnya, sebagian orang mungkin menjadi takut dan justru menutup diri dari Anda.",
     conflictSolution: [
-      "Turunkan volume, bukan ketegasan (tegas tetap, nada lebih rendah).",
-      "Minta orang mengulang kesepakatan (pastikan paham).",
-      "Tutup dengan aksi dan tenggat."
+      "Turunkan volume suara Anda. Anda tetap bisa tegas, tapi gunakan nada yang lebih tenang.",
+      "Pastikan lawan bicara mengulang kesepakatan agar Anda tahu mereka benar-benar paham.",
+      "Tutup obrolan dengan langkah nyata dan batas waktu yang disepakati."
     ],
     recommendations: [
-      "Hari 1–3: Ajukan minimal 2 pertanyaan sebelum berpendapat di meeting.",
-      "Hari 4–6: Saat emosi naik: tarik napas 10 detik, ucapkan 'Tunggu, saya pikir dulu'.",
-      "Hari 7–10: Tentukan 1 orang 'penjaga detail' atau gunakan checklist singkat.",
-      "Hari 11–14: 2 kali percakapan 1–1 fokus mendengar kebutuhan tim."
+      "Hari 1–3 (Latihan Mendengar): Cobalah ajukan minimal 2 pertanyaan kepada teman/kelompok sebelum Anda memberikan pendapat Anda sendiri.",
+      "Hari 4–6 (Jeda Emosi): Saat merasa emosi mulai naik, tarik napas 10 detik dan biasakan berkata, 'Sebentar, aku pikir-pikir dulu ya'.",
+      "Hari 7–10 (Amankan Detail): Karena Anda tidak suka detail, tugaskan satu teman di kelompok untuk jadi 'si pengingat detail', atau buat daftar cek (checklist).",
+      "Hari 11–14 (Sentuhan Personal): Lakukan obrolan berdua saja dengan teman. Fokuslah menanyakan kabar mereka, bukan soal tugas/pekerjaan."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya tetap cepat dan kuat, tetapi lebih dihargai, lebih sedikit konflik, dan hasil tim lebih stabil.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang cepat dan kuat, tetapi Anda akan jauh lebih dihargai, keributan akan berkurang, dan kekompakan teman-teman Anda akan semakin stabil.",
     checklist: [
-      "Minggu 1–2: Tentukan 1 target utama 90 hari + metriknya.",
-      "Minggu 3–4: Buat ritme eksekusi (review mingguan 30 menit).",
-      "Minggu 5–6: Bangun 1 sistem delegasi (RACI sederhana).",
-      "Minggu 7–8: Latih 'komunikasi tegas yang hangat' (apresiasi + koreksi).",
-      "Minggu 9–10: Audit konflik: perbaiki 1 kebiasaan pemicu.",
-      "Minggu 11–12: Konsolidasikan proses agar tim tidak tergantung pada Anda."
+      "Bulan 1: Tentukan 1 target besar yang ingin Anda capai, dan fokuskan energi ke sana.",
+      "Bulan 1: Biasakan melakukan ulasan (review) mingguan selama 15 menit agar tidak ada langkah yang melenceng.",
+      "Bulan 2: Belajar mendelegasikan tugas: bagikan peran sesuai kelebihan teman-teman Anda.",
+      "Bulan 2: Latih komunikasi 'Tegas tapi Hangat' (Puji dulu usaha mereka, baru berikan koreksi/kritik).",
+      "Bulan 3: Audit emosi Anda: Sadari apa yang sering membuat Anda marah, dan belajarlah tersenyum saat itu terjadi.",
+      "Bulan 3: Mulai percayai sistem. Biarkan kelompok Anda berjalan mandiri sesekali, jangan atur semuanya sendiri."
     ],
     suitableCareers: [
-      "Sales Lead, Business Development",
-      "Founder/Entrepreneur",
-      "Team/Project/Campaign Lead (Ritme Cepat)",
-      "Public Speaker/Trainer Energik",
-      "Operations Lead"
+      "Pengusaha atau Pendiri Bisnis (Founder)",
+      "Pemimpin Tim, Ketua Organisasi, atau Manajer",
+      "Pemasaran, Negosiator, atau Hubungan Masyarakat",
+      "Pembicara Publik atau Pelatih (Trainer)",
+      "Pekerjaan yang butuh target, kompetisi, dan tampil di depan"
     ]
   },
   "K-M": {
-    title: "Koleris–Melankolis (Manajer Sistematis)",
-    summary: "Anda adalah kombinasi yang kuat untuk membangun mesin kerja: cepat, tegas, rapi, dan terukur. Anda nyaman memimpin, menetapkan standar, dan memastikan eksekusi berjalan sesuai sistem. Anda cocok memegang area yang menuntut ketertiban dan hasil.",
+    title: "Koleris–Melankolis (Pemimpin yang Disiplin)",
+    summary: "Anda adalah gabungan yang sangat tangguh: bekerja dengan cepat, tegas, sangat rapi, dan terukur. Anda sangat nyaman jika harus memimpin, menetapkan standar tugas, dan memastikan semuanya berjalan sesuai rencana. Anda adalah sosok yang dicari saat sebuah kelompok membutuhkan ketertiban, kedisiplinan, dan hasil karya yang berkualitas tinggi.",
     decisionStyle: [
-      "Target -> Sistem -> Langkah.",
-      "Suka indikator, SOP, dan struktur.",
-      "Cenderung tidak sabar pada 'improvisasi tanpa standar'."
+      "Sangat terstruktur: Punya Target → Buat Rencana → Susun Langkah-langkah.",
+      "Sangat menyukai indikator keberhasilan, aturan main, dan kerapian data.",
+      "Cenderung tidak sabar melihat orang yang suka 'asal jalan' tanpa memikirkan rencana matang."
     ],
     decisionGuide: [
-      "Tetapkan hasil dan standar minimal (jelas).",
-      "Tentukan batas fleksibilitas (mana yang boleh beda).",
-      "Putuskan 1 rute terbaik dan jalankan.",
-      "Pantau via metrik, bukan via 'mengawasi orang' terus-menerus."
+      "Tetapkan hasil akhir dan standar minimalnya dengan sangat jelas di awal.",
+      "Tentukan batas toleransi (bagian mana yang boleh fleksibel, mana yang wajib sama).",
+      "Putuskan 1 cara yang menurut Anda paling baik dan jalankan.",
+      "Pantau kemajuannya melalui hasil kerja (data), bukan dengan terus-terusan mengawasi orangnya."
     ],
     emotionalDynamics: [
-      "Tenang saat semuanya terukur.",
-      "Kesal saat kesalahan berulang atau orang tidak disiplin.",
-      "Bisa menahan stres lama, lalu tiba-tiba keras."
+      "Merasa sangat tenang dan damai jika semuanya berjalan sesuai rencana dan terukur.",
+      "Sangat mudah kesal jika melihat teman mengulang kesalahan yang sama atau tidak disiplin.",
+      "Bisa menahan stres dan kekesalan dalam waktu lama, lalu tiba-tiba meledak menjadi sangat keras."
     ],
-    stressSigns: ["Kontrol makin ketat", "Komentar makin tajam", "Sulit percaya tim"],
+    stressSigns: [
+      "Mulai mengontrol semua hal secara berlebihan", 
+      "Komentar dan kritikan menjadi semakin tajam", 
+      "Menjadi sangat sulit untuk percaya pada kemampuan teman/kelompok",
+      "Mengerjakan semuanya sendiri"
+    ],
     interactionStyle: [
-      "Jelas, tegas, dan efektif.",
-      "Bisa membuat orang berkembang karena standar tinggi.",
-      "Perlu menambah porsi pengakuan (apresiasi) agar tim tidak merasa 'selalu salah'."
+      "Bicara dengan sangat jelas, tegas, dan berfokus pada efisiensi waktu.",
+      "Pintar memberi arahan sehingga orang selalu tahu apa yang harus mereka kerjakan.",
+      "Perlu memperbanyak memberikan pujian/apresiasi agar teman-teman tidak merasa 'selalu salah' di mata Anda."
     ],
     interactionTips: [
-      "Ini standar minimal. Anda bebas pilih cara, asal hasilnya sesuai.",
-      "Saya koreksi prosesnya supaya aman, bukan menyerang pribadi."
+      "Ini standar minimalnya ya. Kamu bebas mau pakai cara apa, yang penting hasilnya sesuai kesepakatan.",
+      "Aku mengoreksi bagian ini supaya nilainya bagus, bukan bermaksud menyalahkan kamu ya."
     ],
     challenges: [
-      "Micromanage (mengatur cara, bukan hasil)",
-      "Kaku pada SOP",
-      "Kritis berlebihan",
-      "Kurang memberi ruang orang belajar"
+      "Suka mengatur hal-hal kecil (Micromanage) yang membuat orang lain merasa terkekang",
+      "Terkadang terlalu kaku pada aturan yang ada",
+      "Memberikan kritik yang terlalu tajam",
+      "Kurang memberikan ruang dan waktu bagi orang lain untuk belajar dari kesalahan"
     ],
-    conflictTrigger: "Ketidakjelasan, ketidakdisiplinan, kesalahan berulang, orang defensif.",
-    conflictStress: "Anda makin mengatur detail, tim makin pasif/diam.",
+    conflictTrigger: "Ketidakjelasan tugas, ketidakdisiplinan, orang yang mengulang kesalahan yang sama, atau orang yang suka membela diri dengan alasan dibuat-buat.",
+    conflictStress: "Anda akan semakin mengatur detail terkecil, menjadi lebih kaku, dan membuat anggota kelompok lainnya malah menjadi diam/pasif ketakutan.",
     conflictSolution: [
-      "Fokus pada proses, bukan orang.",
-      "Tanyakan 'apa penyebab sistemnya?' bukan 'siapa yang salah?'.",
-      "Buat perbaikan proses + pelatihan singkat."
+      "Fokus pada masalahnya, jangan menyerang karakter orangnya.",
+      "Gunakan pertanyaan memancing solusi: 'Kira-kira apa penyebab kita gagal di sini?' dibanding 'Siapa yang salah?'.",
+      "Buat perbaikan rencana dan beri mereka sedikit bimbingan."
     ],
     recommendations: [
-      "Hari 1–3: Kurangi micromanage (cek output & metrik, bukan cara detail).",
-      "Hari 4–6: Buat SOP ringkas 1 halaman untuk 1 proses.",
-      "Hari 7–10: Setiap hari beri 1 apresiasi spesifik.",
-      "Hari 11–14: Saat ada kesalahan, gunakan sebagai pelajaran proses (bukan marah)."
+      "Hari 1–3: Kurangi kebiasaan terlalu mengatur. Mulailah cek 'Hasil akhirnya', bukan memarahi 'Cara mereka mengerjakannya'.",
+      "Hari 4–6: Buat daftar tugas yang sangat ringkas (1 halaman saja) untuk kelompok Anda agar mereka mudah paham.",
+      "Hari 7–10: Wajibkan diri Anda untuk memberikan 1 pujian spesifik kepada teman/saudara setiap harinya.",
+      "Hari 11–14: Saat ada yang berbuat salah, jangan langsung marah. Jadikan itu momen untuk memperbaiki sistem kerja kelompok."
     ],
-    direction: "Dalam 2–4 minggu, tim Anda biasanya lebih mandiri, proses lebih rapi, dan Anda tidak perlu mengontrol semuanya untuk mendapatkan kualitas.",
+    direction: "Dalam 2–4 minggu ke depan, teman atau kelompok Anda akan menjadi lebih mandiri, pekerjaan akan lebih rapi, dan Anda tidak perlu merasa kelelahan karena harus mengontrol semuanya sendirian.",
     checklist: [
-      "Minggu 1–2: Pilih 1 proses paling 'bocor' dan ukur baseline-nya.",
-      "Minggu 3–4: Terapkan SOP ringkas + training 30 menit.",
-      "Minggu 5–6: Pasang metrik dashboard sederhana (maks 5 metrik).",
-      "Minggu 7–8: Delegasi keputusan level kecil ke tim.",
-      "Minggu 9–10: Review pola kesalahan berulang, perbaiki akarnya.",
-      "Minggu 11–12: Standarisasi + dokumentasikan sistem."
+      "Bulan 1: Tentukan 3 indikator keberhasilan (target) paling sederhana untuk tugas/kehidupan Anda saat ini.",
+      "Bulan 1: Catat cara atau langkah kerja yang sering Anda lakukan agar bisa diikuti orang lain dengan mudah.",
+      "Bulan 2: Latihan membagi tugas. Ajari 1 orang teman agar bisa menjadi penanggung jawab tugas tersebut.",
+      "Bulan 2: Rapikan gaya berdiskusi Anda: Buat agenda yang jelas agar obrolan tidak melenceng ke mana-mana.",
+      "Bulan 3: Evaluasi beban pikiran Anda. Coba lepaskan 20% hal yang tidak perlu Anda urusi.",
+      "Bulan 3: Kurangi standar kesempurnaan pada hal-hal kecil yang dampaknya tidak terlalu besar."
     ],
     suitableCareers: [
-      "Operations Manager, Head of Process/SOP",
-      "Compliance, Risk, Audit Internal",
-      "QA/QC Lead",
-      "Implementor ERP/SOP",
-      "Pemilik Bisnis Scaling"
+      "Manajer Operasional atau Pembuat Sistem",
+      "Auditor, Pengawas Kualitas (QC), atau Ahli Risiko",
+      "Pemimpin Tim Teknis atau Kepala Proyek",
+      "Konsultan Manajemen Terpadu",
+      "Pekerjaan yang menuntut keteraturan, analisa, dan kepemimpinan"
     ]
   },
   "K-P": {
-    title: "Koleris–Plegmatis (Pemimpin Tenang)",
-    summary: "Anda adalah pemimpin yang tegas namun stabil. Anda tidak banyak drama, tidak mudah panik, dan mampu membuat keputusan saat orang lain bimbang. Anda terlihat tenang di luar, tetapi tetap berorientasi hasil di dalam. Kombinasi ini sering menjadi 'pilar' dalam tim/keluarga.",
+    title: "Koleris–Plegmatis (Pemimpin yang Tenang)",
+    summary: "Anda adalah sosok pengambil keputusan yang tegas namun sangat stabil. Anda tidak menyukai drama, tidak mudah panik, dan selalu bisa berpikir jernih saat orang lain kebingungan. Dari luar, Anda tampak santai dan diam, tetapi di dalam, Anda sangat fokus pada penyelesaian tugas. Kombinasi ini membuat Anda sering dijadikan 'pilar sandaran' yang kuat oleh teman-teman maupun keluarga.",
     decisionStyle: [
-      "Pragmatis: fokus pada apa yang bisa dijalankan.",
-      "Tidak suka banyak teori tanpa eksekusi.",
-      "Bisa mengambil keputusan tanpa banyak bicara, lalu langsung bergerak."
+      "Sangat praktis: selalu fokus pada 'apa yang benar-benar bisa dijalankan'.",
+      "Tidak suka banyak berteori, berdebat panjang, atau rapat yang tidak ada isinya.",
+      "Bisa mengambil keputusan besar di dalam kepala tanpa banyak bicara, lalu langsung bertindak."
     ],
     decisionGuide: [
-      "Nyatakan tujuan dan batasan (waktu/biaya/risiko).",
-      "Ambil keputusan yang paling realistis.",
-      "Komunikasikan alasan singkat + langkah berikutnya + siapa melakukan apa."
+      "Sampaikan secara terbuka apa tujuan Anda dan apa hambatannya (waktu/uang).",
+      "Ambil keputusan yang paling masuk akal dan realistis untuk situasi saat itu.",
+      "Beri tahu orang lain alasan Anda secara singkat, lalu bagikan siapa mengerjakan apa."
     ],
     emotionalDynamics: [
-      "Jarang menunjukkan stres; cenderung memikulnya sendiri.",
-      "Bisa terlihat 'dingin' padahal peduli.",
-      "Saat beban menumpuk, tubuh sering memberi sinyal lebih dulu."
+      "Sangat jarang menunjukkan wajah stres; Anda lebih memilih memikul beban pikiran itu sendirian.",
+      "Bisa terlihat sangat 'dingin' atau cuek, padahal sebenarnya Anda sangat peduli pada keluarga/tim.",
+      "Jika beban sudah terlalu menumpuk, biasanya tubuh Anda yang akan memberikan sinyal (seperti jatuh sakit) sebelum Anda mengeluh."
     ],
-    stressSigns: ["Diam berkepanjangan", "Menjadi sangat singkat dan kaku", "Keputusan besar mendadak"],
+    stressSigns: [
+      "Diam berhari-hari", 
+      "Menjawab pertanyaan dengan sangat singkat, ketus, dan kaku", 
+      "Mengambil keputusan besar secara mendadak tanpa diskusi"
+    ],
     interactionStyle: [
-      "Orang merasa aman karena Anda stabil dan tegas.",
-      "Tidak mudah ikut emosi, cocok untuk situasi panas.",
-      "Perlu tambah ekspresi apresiasi dan ekspektasi."
+      "Orang merasa sangat aman di dekat Anda karena sifat Anda yang stabil dan tegas.",
+      "Tidak mudah terpancing emosi, sehingga sangat cocok menengahi situasi yang sedang memanas.",
+      "Namun, Anda harus belajar untuk lebih sering mengekspresikan senyum dan pujian agar tidak dianggap kaku."
     ],
     interactionTips: [
-      "Ekspektasi saya begini, supaya kita tidak salah arah.",
-      "Terima kasih, bagian yang Anda lakukan tadi membantu sekali."
+      "Harapanku untuk tugas ini begini ya, biar nanti kita nggak salah arah dan kerja dua kali.",
+      "Terima kasih banyak ya, bantuan kamu di bagian tadi benar-benar bikin urusan cepat selesai."
     ],
     challenges: [
-      "Terlihat dingin/kurang hangat",
-      "Konflik diredam terlalu lama",
-      "Kurang komunikasi (tim bingung arah)",
-      "Sulit minta bantuan (memikul sendiri)"
+      "Sering dianggap kurang ramah, dingin, atau tidak punya empati",
+      "Sering menahan atau mendiamkan masalah terlalu lama sampai menumpuk",
+      "Kurang banyak mengomunikasikan isi kepala Anda, sehingga teman/tim sering bingung arahnya ke mana",
+      "Sangat gengsi untuk meminta bantuan (lebih suka capek sendirian)"
     ],
-    conflictTrigger: "Drama emosional, orang tidak jelas, debat berlarut, ketidakdisiplinan.",
-    conflictStress: "Anda menarik diri, memotong pembicaraan, atau memutuskan cepat.",
+    conflictTrigger: "Drama yang berlebihan, orang yang banyak omong tapi tidak ada kerja nyata, perdebatan berlarut-larut, dan sikap malas.",
+    conflictStress: "Anda akan memilih menarik diri, memotong pembicaraan orang dengan tajam, atau langsung memutuskan sepihak tanpa peduli yang lain.",
     conflictSolution: [
-      "Sampaikan fakta + ekspektasi (singkat).",
-      "Ajak bicara 1–1 (bukan di forum besar).",
-      "Sepakati aturan main dan tindak lanjut tertulis."
+      "Bicarakan faktanya dan apa harapan Anda dengan sangat singkat dan jelas.",
+      "Ajak orang tersebut bicara empat mata, jangan menegurnya di depan orang banyak.",
+      "Sepakati aturan mainnya, dan pastikan mereka benar-benar paham langkah selanjutnya."
     ],
     recommendations: [
-      "Hari 1–3: Transparansi arah (tulis tujuan 1 kalimat + definisi selesai).",
-      "Hari 4–6: Tiap hari beri 1 apresiasi spesifik.",
-      "Hari 7–10: Pilih 1 isu kecil yang didiamkan, selesaikan dalam 10 menit.",
-      "Hari 11–14: Delegasikan 1 hal, ucapkan kapasitas dan kebutuhan Anda."
+      "Hari 1–3: Belajarlah transparan. Jika ada rencana, tulis 1 kalimat tujuan agar teman Anda tahu apa isi kepala Anda.",
+      "Hari 4–6: Mulailah memberi apresiasi. Paksakan diri untuk memuji usaha kecil teman/keluarga setiap hari.",
+      "Hari 7–10: Cari 1 masalah kecil yang selama ini Anda diamkan, lalu selesaikan lewat obrolan 10 menit hari ini.",
+      "Hari 11–14: Paksakan diri meminta tolong pada orang lain. Ucapkan jujur jika Anda sedang lelah."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya lebih dipahami orang, konflik tidak menumpuk, dan beban mental Anda turun karena komunikasi lebih jelas.",
+    direction: "Dalam 2–4 minggu ke depan, jalan pikiran Anda akan lebih mudah dipahami orang lain, masalah tidak lagi menumpuk, dan beban mental Anda jauh lebih ringan karena Anda sudah mau berbagi tugas.",
     checklist: [
-      "Minggu 1–2: Buat standar komunikasi: tujuan, PIC, deadline.",
-      "Minggu 3–4: Terapkan ritual cek-in tim (10–15 menit/minggu).",
-      "Minggu 5–6: Identifikasi 1 konflik berulang, selesaikan.",
-      "Minggu 7–8: Delegasikan 10–20% pekerjaan yang menguras Anda.",
-      "Minggu 9–10: Latih apresiasi: minimal 3 apresiasi spesifik per minggu.",
-      "Minggu 11–12: Review beban & batasan: rapikan jam kerja/prioritas."
+      "Bulan 1: Buat aturan komunikasi yang jelas untuk diri sendiri: biasakan menjelaskan 'Tujuan' sebelum memberi tugas.",
+      "Bulan 1: Buat rutinitas obrolan santai 10 menit dengan kelompok/keluarga setiap minggu untuk menyamakan frekuensi.",
+      "Bulan 2: Identifikasi 1 masalah atau kesalahpahaman yang sering terulang, lalu cari solusinya segera.",
+      "Bulan 2: Lepaskan 20% pekerjaan yang sebenarnya bukan tanggung jawab Anda. Mintalah orang lain mengerjakannya.",
+      "Bulan 3: Latih senyum dan apresiasi: usahakan memberikan 3 pujian spesifik per minggu kepada teman.",
+      "Bulan 3: Evaluasi jam kerja dan istirahat Anda. Ingat, Anda bukan robot yang tidak bisa lelah."
     ],
     suitableCareers: [
-      "Operations Lead, Supervisor Lapangan",
-      "People Manager (Ritme Stabil)",
-      "Security/Safety Lead, Incident Manager",
-      "Pemilik Bisnis Operasional",
-      "Service Delivery Manager"
+      "Manajer Lapangan atau Pengawas Produksi",
+      "Pembuat Strategi, Penasihat, atau Perencana",
+      "Pemimpin Keamanan, Safety Lead, atau Manajer Krisis",
+      "Pekerjaan Operasional yang membutuhkan kestabilan mental",
+      "Pemilik Usaha yang fokus pada hasil nyata"
     ]
   },
   "P-S": {
-    title: "Plegmatis–Sanguinis (Pendamping Ramah)",
-    summary: "Anda adalah pribadi yang hangat, santai, dan mudah membuat orang nyaman. Anda biasanya tidak suka konflik dan pandai menjaga suasana tetap enak. Anda kuat dalam relasi sosial yang ringan, pelayanan, dan menjadi 'teman yang menenangkan'.",
+    title: "Plegmatis–Sanguinis (Sahabat yang Ramah)",
+    summary: "Anda adalah sosok pribadi yang sangat hangat, santai, ceria, dan selalu membuat suasana terasa menyenangkan. Anda paling tidak suka melihat orang bertengkar dan pandai mencairkan suasana. Kelebihan terbesar Anda ada pada kebaikan hati dan kemampuan bersosialisasi yang membuat semua orang merasa memiliki 'teman sejati'.",
     decisionStyle: [
-      "Cenderung memilih yang paling minim gesekan.",
-      "Bisa menunda keputusan karena takut mengecewakan orang.",
-      "Butuh struktur sederhana agar tidak terbawa arus."
+      "Cenderung selalu memilih opsi yang paling aman dan tidak memicu perdebatan.",
+      "Sering menunda mengambil keputusan karena takut pilihan Anda membuat orang lain kecewa.",
+      "Membutuhkan teman yang bisa memandu, jika tidak Anda mudah terbawa arus orang banyak."
     ],
     decisionGuide: [
-      "Tentukan 1 prioritas utama hari ini.",
-      "Putuskan cepat untuk hal kecil (maks 5 menit).",
-      "Untuk hal besar, tetapkan batas waktu, lalu pilih opsi paling realistis."
+      "Setiap pagi, tentukan 1 tugas yang paling penting untuk diri ANDA sendiri.",
+      "Biasakan memutuskan hal-hal kecil (seperti menu makan) dengan cepat, maksimal 3 menit.",
+      "Untuk masalah besar, buat batasan waktu. Pilih opsi yang paling menenangkan pikiran Anda."
     ],
     emotionalDynamics: [
-      "Stabil, tetapi bisa merasa tidak dihargai bila terlalu sering mengalah.",
-      "Sering bilang 'tidak apa-apa' padahal sebenarnya ada yang mengganjal.",
-      "Mudah lelah jika terlalu banyak interaksi tanpa waktu recharge."
+      "Stabil dan murah senyum, namun bisa merasa sangat terkuras jika orang terus-menerus memanfaatkan kebaikan Anda.",
+      "Sering bilang 'Oh, tidak apa-apa', padahal di dalam hati sebenarnya Anda merasa kurang nyaman.",
+      "Mudah kelelahan jika seharian berada di lingkungan yang terlalu berisik dan banyak tuntutan."
     ],
-    stressSigns: ["Menghindari chat/telepon", "Menunda hal sederhana", "Merasa 'ingin kabur'"],
+    stressSigns: [
+      "Sengaja menghindari buka HP, chat, atau telepon dari orang", 
+      "Menunda-nunda pekerjaan sampai benar-benar mepet", 
+      "Merasa 'ingin kabur' ke tempat sepi atau banyak tidur"
+    ],
     interactionStyle: [
-      "Ramah, adaptif, dan tidak menghakimi.",
-      "Mudah membuat suasana cair.",
-      "Perlu latih ketegasan agar kebaikan tidak dimanfaatkan."
+      "Sangat ramah, mudah beradaptasi, dan tidak suka menghakimi orang lain.",
+      "Suasana yang tegang bisa langsung mencair jika Anda datang membawa senyuman.",
+      "Anda perlu sekali melatih ketegasan agar kebaikan Anda tidak dijadikan alat untuk menginjak Anda."
     ],
     interactionTips: [
-      "Saya bisa bantu, tapi saya hanya punya waktu sampai jam …",
-      "Saya belum bisa mengiyakan. Saya kabari setelah saya cek jadwal."
+      "Aku bisa aja sih bantu kamu, tapi aku baru ada waktu luang nanti sore ya.",
+      "Wah, aku belum bisa janji ikut. Nanti aku kabarin lagi ya kalau jadwalku aman."
     ],
     challenges: [
-      "Sulit berkata tidak",
-      "Mudah ikut arus dan kehilangan arah pribadi",
-      "Menunda (karena terlalu santai)",
-      "Kebutuhan sendiri tidak tersampaikan"
+      "Sangat sulit untuk berkata 'Tidak' pada permintaan teman",
+      "Mudah ikut-ikutan tren atau pilihan orang lain sampai melupakan keinginan diri sendiri",
+      "Menunda-nunda pekerjaan (Prokrastinasi) karena terlalu santai",
+      "Tidak berani menyuarakan kebutuhan atau rasa sakit hati Anda"
     ],
-    conflictTrigger: "Konflik, orang menekan, drama, tuntutan mendadak.",
-    conflictStress: "Anda menghindar, diam, atau pasif-agresif halus (menunda, lupa).",
+    conflictTrigger: "Pertengkaran terbuka, ditekan untuk serba cepat, suasana drama, dan dipaksa memilih belah pihak.",
+    conflictStress: "Anda akan diam, menghindar, mencari banyak alasan, atau merespons dengan sikap pasif-agresif (sengaja menunda/pura-pura lupa).",
     conflictSolution: [
-      "Gunakan batasan waktu dan kapasitas (fakta, bukan emosi).",
-      "Ajak bicara singkat 1–1.",
-      "Sepakati solusi kecil yang bisa dijalankan sekarang."
+      "Gunakan batasan waktu yang jelas, misalnya: 'Maaf ya, tugasku yang ini harus selesai jam 2'.",
+      "Bicarakan masalahnya berdua saja sambil duduk santai.",
+      "Sepakati jalan keluar kecil yang paling mudah dijalankan bersama hari itu juga."
     ],
     recommendations: [
-      "Hari 1–3: Latih penolakan kecil ('Saya belum bisa ya').",
-      "Hari 4–6: Tulis 3 hal yang Anda ingin capai 90 hari ke depan.",
-      "Hari 7–10: Setiap pagi tulis 3 tugas saja: penting–sedang–kecil.",
-      "Hari 11–14: Sampaikan 1 kebutuhan ke orang terdekat/rekan."
+      "Hari 1–3: Latihlah cara menolak dengan halus. Coba katakan, 'Maaf ya, kali ini aku belum bisa gabung'.",
+      "Hari 4–6: Tuliskan 3 hal yang murni ingin Anda capai (bukan impian orang tua/teman) untuk bulan ini.",
+      "Hari 7–10: Setiap pagi, tulis 3 tugas saja. Fokus selesaikan itu tanpa terganggu ajakan main.",
+      "Hari 11–14: Beranikan diri menyampaikan 1 hal yang membuat Anda kurang nyaman kepada teman terdekat."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya lebih tegas, tidak mudah dimanfaatkan, lebih produktif, dan tetap hangat tanpa mengorbankan diri.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang hangat dan disukai, namun Anda akan lebih dihormati karena berani tegas dan tidak lagi gampang dimanfaatkan orang.",
     checklist: [
-      "Minggu 1–2: Latih batasan: 2 kali menolak permintaan non-prioritas.",
-      "Minggu 3–4: Terapkan rutinitas 3 tugas/hari selama 10 hari.",
-      "Minggu 5–6: Ambil 1 proyek mini dan selesaikan sampai tuntas.",
-      "Minggu 7–8: Bangun kebiasaan komunikasi kebutuhan (1/pekan).",
-      "Minggu 9–10: Audit relasi: siapa yang menguras Anda? pasang batas.",
-      "Minggu 11–12: Review tujuan 90 hari dan penyesuaiannya."
+      "Bulan 1: Latih otot ketegasan. Praktikkan menolak permintaan ringan minimal 2 kali seminggu.",
+      "Bulan 1: Cobalah rutinitas 'Fokus 3 Tugas Sehari' selama dua minggu berturut-turut.",
+      "Bulan 2: Pilih 1 hobi, tugas, atau kursus pendek, dan komitmen selesaikan sampai akhir tanpa putus di tengah jalan.",
+      "Bulan 2: Mulai biasakan berkomunikasi jujur: ungkapkan perasaan Anda jika ada teman yang bicaranya menyakitkan.",
+      "Bulan 3: Audit lingkaran pertemanan: Siapa yang selalu menyedot energi Anda? Mulai batasi interaksi dengan mereka.",
+      "Bulan 3: Evaluasi tujuan hidup Anda. Pastikan langkah yang Anda ambil adalah untuk kebahagiaan Anda sendiri."
     ],
     suitableCareers: [
-      "Customer Service, Hospitality",
-      "Community Officer, HR Support",
-      "Admin Koordinasi Ringan, Asisten Tim",
-      "Event Support (Non-high pressure)",
-      "Peran Service-based"
+      "Layanan Pelanggan (Customer Service) atau Pekerja Perhotelan",
+      "Penasihat, Konselor Remaja, atau Pengurus Komunitas",
+      "Staf Administrasi yang membutuhkan koordinasi ramah",
+      "Pekerjaan Event Organizer atau Pendukung Acara",
+      "Peran yang berpusat pada kepedulian dan melayani orang lain"
     ]
   },
   "P-M": {
-    title: "Plegmatis–Melankolis (Penjaga Setia)",
-    summary: "Anda lembut, setia, dan sangat mempertimbangkan perasaan orang lain. Anda menyukai stabilitas, kedamaian, dan hubungan yang tulus. Anda sering menjadi 'penjaga' dalam relasi: yang tetap ada, tetap mendukung, dan jarang menuntut.",
+    title: "Plegmatis–Melankolis (Penjaga yang Setia)",
+    summary: "Anda adalah sosok yang sangat lembut, setia, dan punya kepekaan yang luar biasa terhadap perasaan orang lain. Anda sangat menyukai ketenangan, suasana yang stabil, dan persahabatan yang tulus. Dalam lingkungan mana pun, Anda sering menjadi 'penjaga yang tak terlihat': Anda selalu ada untuk mendukung, merawat, dan sangat jarang banyak menuntut.",
     decisionStyle: [
-      "Mempertimbangkan dampak ke orang dan risiko emosional.",
-      "Bisa menunda keputusan agar tidak salah dan tidak melukai siapa pun.",
-      "Butuh keberanian untuk memutuskan sebelum 'sempurna yakin'."
+      "Selalu memikirkan perasaan orang lain: 'Apakah keputusanku ini akan menyakiti hatinya?'.",
+      "Sering menunda keputusan penting agar tidak salah langkah dan membuat orang kecewa.",
+      "Membutuhkan dorongan semangat untuk berani memutuskan sesuatu sebelum merasa '100% yakin'."
     ],
     decisionGuide: [
-      "Tentukan apa yang Anda butuhkan (bukan hanya orang lain).",
-      "Pilih opsi yang paling selaras dengan nilai Anda.",
-      "Komunikasikan dengan lembut tapi jelas."
+      "Tanyakan pada diri sendiri: 'Apa yang sebenarnya AKU butuhkan?', jangan cuma memikirkan orang lain.",
+      "Pilih pilihan yang paling sesuai dengan prinsip dan hati nurani Anda.",
+      "Sampaikan keputusan Anda dengan bahasa yang lembut tapi jelas maknanya."
     ],
     emotionalDynamics: [
-      "Bisa memendam sedih/kecewa karena tidak ingin konflik.",
-      "Mudah merasa bersalah, bahkan ketika Anda tidak salah.",
-      "Saat terlalu lama memendam, Anda bisa 'hilang' (menjauh)."
+      "Sering memendam rasa sedih atau kecewa sendirian karena tidak ingin memicu pertengkaran.",
+      "Sangat mudah merasa bersalah (bahkan sering meminta maaf untuk hal yang bukan salah Anda).",
+      "Jika Anda sudah memendam luka terlalu lama, Anda bisa tiba-tiba 'hilang' atau menjauhi orang tersebut secara perlahan."
     ],
-    stressSigns: ["Menarik diri sosial", "Mudah menangis/tersentuh", "Menutup diri"],
+    stressSigns: [
+      "Menarik diri dari obrolan sosial atau grup", 
+      "Sangat mudah menangis atau merasa tersentuh", 
+      "Mengurung diri di kamar terlalu lama",
+      "Mulai memikirkan kenangan buruk masa lalu"
+    ],
     interactionStyle: [
-      "Setia, sabar, dan tulus.",
-      "Orang merasa aman karena Anda tidak reaktif.",
-      "Perlu latih menyampaikan kebutuhan dan ketidaksetujuan lebih awal."
+      "Sangat setia, penyabar, dan punya niat yang tulus.",
+      "Orang merasa sangat nyaman di dekat Anda karena Anda jarang marah dan tidak meledak-ledak.",
+      "Sangat perlu melatih keberanian untuk mengungkapkan rasa tidak setuju sejak awal."
     ],
     interactionTips: [
-      "Saya menghargai Anda, tapi saya kurang nyaman kalau…",
-      "Saya butuh… supaya saya bisa tetap mendukung dengan baik."
+      "Aku sangat menghargai niat baikmu, tapi aku kurang nyaman kalau caranya begini.",
+      "Biar aku bisa bantu kamu dengan maksimal, aku butuh waktu istirahat juga ya."
     ],
     challenges: [
-      "Rendah diri / merasa tidak enak",
-      "Memendam lalu menjauh",
-      "Sulit tegas karena takut konflik",
-      "Overthinking dan menyalahkan diri"
+      "Sering merasa rendah diri atau merasa 'tidak cukup pintar/hebat' dibanding orang lain",
+      "Kebiasaan memendam masalah sampai hati hancur, lalu menjauh",
+      "Sulit bersikap tegas karena terlalu takut dibenci atau dimusuhi",
+      "Terlalu banyak berpikir berlebihan (Overthinking) dan menyalahkan diri sendiri"
     ],
-    conflictTrigger: "Kritik tajam, konflik terbuka, merasa diabaikan, lingkungan keras.",
-    conflictStress: "Anda diam, menghindar, dan memproses sendiri terlalu lama.",
+    conflictTrigger: "Kritikan yang tajam dan kasar, bentakan, merasa diabaikan, atau lingkungan yang penuh tekanan dan persaingan ketat.",
+    conflictStress: "Anda akan memilih untuk diam, menghindar sejauh mungkin, dan menangis atau memproses masalah tersebut sendirian dalam waktu yang lama.",
     conflictSolution: [
-      "Ambil jeda (bukan menghilang): 'Saya butuh waktu sampai malam ini'.",
-      "Sampaikan 1 poin inti + perasaan + kebutuhan.",
-      "Sepakati tindakan kecil untuk memperbaiki rasa aman."
+      "Ambil waktu untuk menyendiri sejenak, katakan: 'Aku butuh waktu tenang, nanti malam kita bahas ya'.",
+      "Gunakan rumus curhat: Sampaikan 1 inti masalah + apa yang Anda rasakan + apa yang Anda butuhkan.",
+      "Buat satu kesepakatan kecil dengan teman agar kejadian serupa tidak terulang dan hati kembali aman."
     ],
     recommendations: [
-      "Hari 1–3: Tulis 5 hal yang membuat Anda merasa dihargai dan aman.",
-      "Hari 4–6: 1 kali/hari sampaikan preferensi kecil (makanan, waktu).",
-      "Hari 7–10: Saat masalah, tulis 'tanggung jawab saya' vs 'bukan'.",
-      "Hari 11–14: Sampaikan 1 batasan nyata (jam istirahat, cara bicara)."
+      "Hari 1–3 (Sadari Nilai Anda): Tulis 5 hal kecil yang membuat Anda merasa berharga dan bahagia. Lakukan salah satunya.",
+      "Hari 4–6 (Latihan Memilih): Paksakan diri untuk memilih 1 hal setiap hari (misal: 'Hari ini aku mau baju warna ini').",
+      "Hari 7–10 (Hentikan Rasa Bersalah): Jika ada masalah, tulis di kertas: Mana yang 'Kesalahan Saya' dan mana yang 'Bukan Kendali Saya'.",
+      "Hari 11–14 (Batasan Tegas): Sampaikan 1 batasan nyata kepada teman (misal: 'Tolong jangan chat urusan tugas di atas jam 9 malam ya')."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya lebih berani bersuara, lebih tenang karena kebutuhan Anda diakui, dan hubungan menjadi lebih sehat.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tumbuh menjadi pribadi yang lebih berani bersuara, batin Anda akan jauh lebih tenang, dan orang-orang akan belajar lebih menghargai batas kesabaran Anda.",
     checklist: [
-      "Minggu 1–2: Tulis kebutuhan & batasan pribadi (3 batasan utama).",
-      "Minggu 3–4: Latih menyampaikan 1 kebutuhan/pekan.",
-      "Minggu 5–6: Ambil 1 kebiasaan self-care konsisten.",
-      "Minggu 7–8: Selesaikan 1 konflik kecil dengan percakapan 1–1.",
-      "Minggu 9–10: Audit relasi: mana yang sehat, mana yang menguras.",
-      "Minggu 11–12: Evaluasi diri: bukti pertumbuhan Anda."
+      "Bulan 1: Kenali diri Anda. Tulis 3 hal yang paling tidak Anda sukai, dan berjanjilah untuk menolak jika diminta.",
+      "Bulan 1: Latih keberanian untuk memberitahu teman apa yang Anda inginkan minggu ini.",
+      "Bulan 2: Jadwalkan 'Waktu Sendiri' (Me Time) yang berkualitas secara rutin, jangan dihabiskan untuk memikirkan masalah.",
+      "Bulan 2: Selesaikan 1 kesalahpahaman kecil dengan seseorang melalui obrolan santai berdua.",
+      "Bulan 3: Audit orang-orang di sekitar Anda: Siapa yang selalu menyalahkan Anda? Kurangi waktu dengan mereka.",
+      "Bulan 3: Evaluasi diri: Catat setiap pujian atau keberhasilan kecil yang telah Anda lakukan agar rasa percaya diri tumbuh."
     ],
     suitableCareers: [
-      "Admin Rapi, Dokumentasi, Quality Support",
-      "HR Support, Counselor/Pendamping",
-      "Customer Support Empati Tinggi",
-      "Back Office, Finance Support"
+      "Administrasi, Editor, atau Penjaga Dokumen Penting",
+      "Konselor, Pendamping Psikologi, atau Pekerja Sosial",
+      "Layanan Pelanggan yang butuh tingkat empati dan kesabaran ekstra",
+      "Keuangan, Back Office, atau Penata Data",
+      "Pekerjaan yang memadukan analisa tenang dan melayani sesama"
     ]
   },
   "P-K": {
-    title: "Plegmatis–Koleris (Pelaksana Tangguh)",
-    summary: "Anda terlihat tenang, namun sebenarnya kuat dan tahan banting. Anda tidak suka ribut, tapi Anda bisa sangat tegas jika batas Anda terlewati. Anda sering menjadi orang yang membuat operasional berjalan: stabil, konsisten, dan dapat diandalkan.",
+    title: "Plegmatis–Koleris (Pelaksana yang Tangguh)",
+    summary: "Anda tampak tenang, murah senyum, dan santai dari luar, namun di dalam, Anda adalah sosok yang punya kemauan keras dan tahan banting. Anda tidak suka mencari ribut, tapi Anda juga tidak akan mundur jika prinsip Anda dilanggar. Anda sering menjadi tulang punggung dalam sebuah kelompok: stabil, konsisten, mandiri, dan sangat bisa diandalkan untuk membereskan pekerjaan diam-diam.",
     decisionStyle: [
-      "Tidak terburu-buru; ingin aman dan realistis.",
-      "Lebih suka eksekusi daripada banyak bicara.",
-      "Bisa menahan keputusan sampai 'cukup bukti', lalu final."
+      "Tidak suka terburu-buru; lebih suka memastikan semuanya aman, rasional, dan realistis.",
+      "Lebih suka langsung bekerja (eksekusi) daripada terlalu banyak rapat atau berdebat kosong.",
+      "Kadang menahan keputusan sampai dirasa 'buktinya sudah kuat', baru memberi keputusan final."
     ],
     decisionGuide: [
-      "Ukur kapasitas Anda (waktu/energi).",
-      "Putuskan batas (apa yang sanggup dan tidak).",
-      "Komunikasikan lebih awal, bukan saat sudah penuh."
+      "Hitung dengan jujur berapa banyak tenaga dan waktu luang yang Anda miliki saat ini.",
+      "Berikan batas tegas: apa yang masih sanggup Anda bantu, dan apa yang sudah di luar batas.",
+      "Sampaikan batasan tersebut lebih awal, jangan menunggu sampai Anda benar-benar kelelahan."
     ],
     emotionalDynamics: [
-      "Jarang marah, tetapi jika marah biasanya sudah lama menahan.",
-      "Bisa merasa tidak punya pilihan, padahal hanya belum menyatakan batas.",
-      "Saat capek, Anda cenderung diam dan 'menghilang'."
+      "Sangat jarang terlihat marah, tetapi jika Anda marah, itu berarti Anda sudah menahan perasaan terlalu lama.",
+      "Sering merasa sendirian karena orang mengira Anda 'bisa mengatasi segalanya', padahal Anda juga butuh bantuan.",
+      "Saat sangat capek, Anda cenderung mendadak diam seribu bahasa dan menarik diri dari lingkungan."
     ],
-    stressSigns: ["Cepat lelah & malas bicara", "Menunda hal sederhana", "Ingin putus hubungan/kerja mendadak"],
+    stressSigns: [
+      "Sangat cepat lelah dan malas diajak berbicara", 
+      "Menunda-nunda pekerjaan rumah atau tugas yang sebenarnya mudah", 
+      "Ingin marah atau putus hubungan kerja secara tiba-tiba karena merasa jenuh"
+    ],
     interactionStyle: [
-      "Stabil, tidak reaktif, bisa dipercaya.",
-      "Orang merasa aman menitipkan tanggung jawab.",
-      "Perlu latih menolak dan meminta bantuan tanpa rasa bersalah."
+      "Pembawaan stabil, tidak mudah panik, dan selalu bisa dipercaya.",
+      "Orang merasa sangat aman menitipkan tugas berat kepada Anda karena tahu pasti akan selesai.",
+      "Anda harus banyak berlatih untuk berani meminta bantuan tanpa merasa menjadi beban bagi orang lain."
     ],
     interactionTips: [
-      "Saya bisa ambil bagian ini, sisanya perlu dukungan.",
-      "Untuk menjaga kualitas, saya butuh deadline yang realistis."
+      "Aku bisa mengerjakan bagian yang ini, tapi sisanya aku butuh bantuan dari kalian ya.",
+      "Supaya hasilnya maksimal, aku butuh waktu tambahan sampai besok sore."
     ],
     challenges: [
-      "Terlalu memikul beban (sulit menolak)",
-      "Batasan telat disampaikan",
-      "Dianggap pasif padahal sedang menahan",
-      "Keputusan besar mendadak saat sudah jenuh"
+      "Terlalu sering memikul beban sendirian karena merasa sungkan untuk menolak atau minta tolong",
+      "Baru mau bicara atau protes saat diri sudah benar-benar kelelahan dan kehabisan kesabaran",
+      "Sering dianggap terlalu pasif atau 'terserah', padahal di dalam hati sedang menahan pendapat",
+      "Terkadang bisa meledak mengambil keputusan nekat saat sedang merasa stres berat"
     ],
-    conflictTrigger: "Diminta terus-menerus, perubahan mendadak, orang menekan, komunikasi kasar.",
-    conflictStress: "Anda diam, menahan, lalu tegas secara mendadak.",
+    conflictTrigger: "Dipaksa dan disuruh-suruh terus menerus, aturan yang berubah dadakan, atau orang yang komunikasinya kasar dan tidak menghargai.",
+    conflictStress: "Anda akan memilih diam menahan amarah, lalu secara tiba-tiba mengambil keputusan putus hubungan yang mengagetkan semua orang.",
     conflictSolution: [
-      "Nyatakan batas kapasitas (angka/waktu).",
-      "Tawarkan opsi (A/B) agar tetap solusi.",
-      "Jika pelanggaran berulang, buat konsekuensi jelas."
+      "Sampaikan secara jujur kapasitas Anda dengan angka yang jelas (misal: 'Aku cuma punya waktu 2 jam').",
+      "Berikan mereka pilihan (A atau B) supaya masalah tetap ada jalan keluarnya.",
+      "Jika mereka terus melanggar, berikan konsekuensi atau peringatan yang tegas secara perlahan."
     ],
     recommendations: [
-      "Hari 1–3: Ukur kapasitas: tandai slot kosong, tentukan 'kapasitas bantu'.",
-      "Hari 4–6: Tolak 1 permintaan tidak prioritas dengan kalimat singkat.",
-      "Hari 7–10: Untuk 1 tugas besar, minta dukungan sebelum mepet.",
-      "Hari 11–14: Sampaikan batasan utama (jam kerja, cara komunikasi)."
+      "Hari 1–3 (Ukur Kekuatan): Lihat jadwal Anda minggu ini. Beri tanda merah pada waktu istirahat, dan jangan biarkan orang mengganggu waktu itu.",
+      "Hari 4–6 (Latihan Menolak): Beranikan diri menolak 1 ajakan atau tugas tambahan yang sebenarnya bukan tanggung jawab Anda.",
+      "Hari 7–10 (Minta Tolong): Jangan jadi pahlawan super. Mintalah teman atau saudara untuk membantu 1 tugas kecil Anda hari ini.",
+      "Hari 11–14 (Atur Syarat): Sampaikan 1 syarat cara komunikasi kepada teman (misalnya: 'Kalau butuh bantuan mendadak, telepon aja ya, jangan chat')."
     ],
-    direction: "Dalam 2–4 minggu, Anda biasanya lebih ringan, lebih dihormati (karena batas jelas), dan tidak mudah 'meledak' karena kelelahan.",
+    direction: "Dalam 2–4 minggu ke depan, Anda akan merasa bahu Anda lebih ringan, orang lain akan lebih sungkan dan menghormati Anda, dan Anda tidak lagi gampang stres karena kelelahan.",
     checklist: [
-      "Minggu 1–2: Tetapkan batas kerja: jam, kapasitas, prioritas.",
-      "Minggu 3–4: Latih menolak 2 permintaan non-prioritas.",
-      "Minggu 5–6: Delegasikan/berbagi 1 tanggung jawab yang menguras.",
-      "Minggu 7–8: Buat sistem kerja sederhana (checklist).",
-      "Minggu 9–10: Evaluasi relasi kerja: siapa yang menghargai batas Anda?",
-      "Minggu 11–12: Review: strategi pencegahan menahan beban."
+      "Bulan 1: Tetapkan batas jam kerja/belajar Anda. Jangan korbankan waktu tidur untuk tugas.",
+      "Bulan 1: Kuatkan mental Anda untuk menolak minimal 2 pekerjaan yang bukan tanggung jawab Anda.",
+      "Bulan 2: Belajar bekerja sama. Bagikan 1 tugas berat yang selama ini Anda pikul sendirian kepada teman sekelompok.",
+      "Bulan 2: Buat daftar periksa (checklist) sederhana untuk rutinitas harian agar tidak ada yang menumpuk di akhir minggu.",
+      "Bulan 3: Amati lingkungan Anda: Siapa yang selalu menghargai bantuan Anda, dan siapa yang hanya memanfaatkan? Buat jarak.",
+      "Bulan 3: Latih kebiasaan baru: Jangan menunggu sampai stres untuk bercerita; bicarakan sedikit-sedikit setiap hari."
     ],
     suitableCareers: [
-      "Operasional Harian, Admin Operasional",
-      "Logistik, Produksi, Maintenance",
-      "Team Support/Second-in-Command",
+      "Manajer Operasional Harian atau Bagian Logistik",
+      "Teknisi, Produksi, atau Pemeliharaan (Maintenance)",
+      "Wakil Pemimpin (Second-in-Command) yang menjaga stabilitas tim",
       "Koordinator Lapangan",
-      "Peran Ketegasan Tanpa Drama"
+      "Pekerjaan yang membutuhkan ketegasan dan konsistensi tinggi tanpa banyak drama"
     ]
   },
-  // --- PURE PROFILES (Adapted to New Structure) ---
   "S-S": {
-    title: "Sanguinis Murni (Bintang Panggung Sejati)",
-    summary: "Anda adalah definisi energi dan antusiasme. Kehadiran Anda selalu menghidupkan suasana. Anda sangat ekspresif, spontan, dan memiliki kemampuan alami untuk menarik perhatian orang lain. Hidup bagi Anda adalah pesta yang harus dinikmati.",
+    title: "Sanguinis Murni (Si Bintang Panggung Sejati)",
+    summary: "Anda adalah definisi nyata dari energi, tawa, dan antusiasme! Kehadiran Anda di mana pun selalu berhasil menghidupkan suasana dan mengubah hari yang sepi menjadi meriah. Anda sangat ekspresif, spontan, dan seolah memiliki daya tarik alami yang membuat banyak orang ingin berteman dengan Anda. Bagi Anda, hidup ini terlalu singkat jika tidak dinikmati seperti sebuah perayaan.",
     decisionStyle: [
-      "Sangat impulsif, mengandalkan intuisi saat itu juga.",
-      "Optimis berlebihan, sering mengabaikan risiko.",
-      "Cepat memutuskan tapi juga cepat berubah pikiran."
+      "Sangat impulsif; sering mengambil keputusan spontan berdasarkan 'mood' atau perasaan saat itu juga.",
+      "Terlalu optimis bahwa semua hal akan berjalan baik, sehingga sering mengabaikan risiko di masa depan.",
+      "Sangat cepat dalam memutuskan sesuatu, tapi sayangnya juga sangat cepat untuk berubah pikiran keesokan harinya."
+    ],
+    decisionGuide: [
+      "Tarik napas dalam-dalam. Beri waktu 1 jam sebelum mengiyakan sebuah ajakan atau membeli barang mahal.",
+      "Tanyakan pada teman dekat yang lebih logis, 'Kira-kira rencanaku ini masuk akal nggak ya?'.",
+      "Tuliskan rencana keputusan Anda, karena seringkali setelah ditulis, Anda akan sadar bahwa ide tersebut terlalu berlebihan."
     ],
     emotionalDynamics: [
-      "Emosi meledak-ledak: sangat senang atau sangat sedih dalam hitungan menit.",
-      "Tidak bisa menyimpan dendam, cepat marah cepat lupa.",
-      "Sangat butuh perhatian dan validasi sosial."
+      "Emosi Anda seperti wahana roller coaster: bisa sangat gembira, lalu sangat sedih, dan kembali tertawa dalam hitungan menit.",
+      "Sulit untuk menyimpan dendam terlalu lama; Anda cepat marah, tapi hitungan menit kemudian sudah lupa alasannya.",
+      "Sangat bergantung pada perhatian, dukungan, dan pengakuan positif (validasi) dari lingkaran sosial Anda."
+    ],
+    stressSigns: [
+      "Bicara tanpa jeda dan nadanya makin kencang", 
+      "Terlihat gelisah dan mondar-mandir", 
+      "Sering memotong omongan orang", 
+      "Berbelanja atau jajan makanan secara berlebihan untuk pelarian"
     ],
     interactionStyle: [
-      "Mendominasi percakapan dengan cerita seru.",
-      "Sangat fisik (suka memeluk, menepuk bahu).",
-      "Humoris dan menghibur."
+      "Paling suka memegang kendali percakapan dan menceritakan pengalaman seru dengan sangat heboh.",
+      "Sangat hangat secara fisik dan emosional (suka merangkul, menepuk pundak, mudah tersenyum lebar).",
+      "Sering tanpa sadar mendominasi obrolan sehingga lupa memberikan waktu bagi orang lain untuk ikut bercerita."
+    ],
+    interactionTips: [
+      "Wah, ceritaku kepanjangan ya? Maaf, sekarang gantian deh, kamu gimana kabarnya?",
+      "Aku bakal dengerin cerita kamu dulu sampai selesai, baru nanti aku kasih komentarku."
     ],
     challenges: [
-      "Sangat tidak terorganisir / berantakan",
-      "Sering lupa janji atau detail penting",
-      "Bicara tanpa berpikir panjang",
-      "Sulit menyelesaikan apa yang dimulai"
+      "Sangat tidak terorganisir (kamar, meja belajar, atau jadwal harian sering berantakan)",
+      "Penyakit lupa kronis; sering lupa akan janji, barang bawaan, atau detail tugas penting",
+      "Sering berbicara spontan tanpa dipikir panjang, yang kadang membuat orang perasa menjadi tersinggung",
+      "Semangat memulai 100 hal baru, tapi sangat sulit menyelesaikan walau hanya 1 hal sampai tuntas"
     ],
-    conflictTrigger: "Diabaikan atau suasana sepi.",
-    conflictStress: "Anda menjadi sangat dramatis atau mencari pelarian.",
-    checklist: [
-      "Minggu 1-2: Gunakan kalender digital/fisik untuk semua janji temu.",
-      "Minggu 3-4: Latihan mendengarkan aktif: Jangan potong pembicaraan orang.",
-      "Minggu 5-6: Selesaikan satu proyek kecil sebelum memulai yang baru.",
-      "Minggu 7-8: Rapikan satu area fisik (meja/kamar) setiap hari Jumat.",
-      "Minggu 9-10: Lacak pengeluaran harian untuk kontrol impuls.",
-      "Minggu 11-12: Refleksi diri 10 menit tanpa gangguan gadget."
+    conflictTrigger: "Dicuekin, ditinggal sendirian, lingkungan yang terlalu sepi dan kaku, atau tidak diizinkan untuk memberikan pendapat.",
+    conflictStress: "Anda akan bertindak sangat dramatis (berlebihan), mencari pembenaran dari teman lain, atau lari mencari hiburan untuk melupakan masalah.",
+    conflictSolution: [
+      "Ambil waktu 10 menit menjauh dari keramaian untuk menurunkan emosi sebelum merespons.",
+      "Dengarkan lawan bicara sampai kalimatnya titik, jangan menyela sebelum dia selesai.",
+      "Gunakan catatan saat berdebat agar Anda tidak keluar dari topik (tidak membahas kejadian masa lalu)."
     ],
     recommendations: [
-      "Hari 1-3: Catat semua janji di kalender, jangan hanya diingat.",
-      "Hari 4-6: Latih diam selama 5 menit saat orang lain bicara.",
-      "Hari 7-10: Selesaikan satu tugas kecil sampai tuntas sebelum mulai yang baru.",
-      "Hari 11-14: Minta teman mengingatkan jika Anda mulai mendominasi obrolan."
+      "Hari 1-3: Biasakan mencatat. Jangan percayai ingatan Anda; masukkan semua tugas atau janji ke alarm HP/buku catatan.",
+      "Hari 4-6: Latih kemampuan mendengar aktif. Dalam 1 percakapan hari ini, paksa diri Anda tutup mulut selama 5 menit penuh.",
+      "Hari 7-10: Berhentilah memulai proyek/hobi baru sebelum tugas/hobi yang ada saat ini sudah Anda bereskan tuntas.",
+      "Hari 11-14: Cobalah untuk menahan hasrat jajan/belanja impulsif selama beberapa hari ke depan demi kesehatan dompet."
+    ],
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok yang ceria dan penuh warna, namun Anda akan lebih bisa dipercaya oleh teman-teman karena janji dan tugas Anda lebih banyak yang terselesaikan dengan baik.",
+    checklist: [
+      "Bulan 1: Gunakan buku agenda atau kalender HP dengan disiplin untuk mencatat setiap janji temu/jadwal tugas.",
+      "Bulan 1: Praktikkan kebiasaan 'Dengar sampai Selesai' setiap kali teman Anda sedang mencurahkan isi hatinya.",
+      "Bulan 2: Targetkan penyelesaian tugas. Beri hadiah pada diri sendiri HANYA jika tugas tersebut sudah selesai 100%.",
+      "Bulan 2: Rapikan satu titik fisik di hidup Anda (misalnya laci meja atau kasur) secara rutin setiap akhir pekan.",
+      "Bulan 3: Buat daftar belanja sebelum keluar rumah dan disiplin patuhi daftar tersebut untuk mengerem keinginan impulsif.",
+      "Bulan 3: Luangkan waktu 10 menit malam hari untuk duduk diam tanpa HP, dan evaluasi ucapan Anda hari ini."
     ],
     suitableCareers: [
-      "Aktor/Entertainer",
-      "Public Speaker",
-      "Event Organizer",
-      "Tour Guide"
+      "Aktor, Musisi, atau Entertainer Panggung",
+      "Pembicara Publik, Youtuber, atau Kreator Konten",
+      "Penyelenggara Acara (Event Organizer) atau Pemasaran",
+      "Pemandu Wisata, Penyiar Radio, atau Duta Merek (Brand Ambassador)",
+      "Pekerjaan yang membebaskan ekspresi dan mengharuskan banyak bergaul"
     ]
   },
   "K-K": {
-    title: "Koleris Murni (Komandan Tegas)",
-    summary: "Anda memiliki kemauan besi dan fokus yang tak tergoyahkan pada tujuan. Anda lahir untuk memimpin dan mengambil kendali. Hambatan bagi Anda adalah tantangan yang harus dihancurkan. Anda sangat mandiri dan percaya diri.",
+    title: "Koleris Murni (Si Komandan yang Tegas)",
+    summary: "Anda memiliki kemauan keras yang sekeras baja dan fokus yang jarang bisa digoyahkan. Anda seolah dilahirkan untuk mengambil alih kendali, memimpin barisan, dan memastikan segala sesuatu mencapai garis akhir. Hambatan besar di mata orang lain, bagi Anda hanyalah tantangan seru yang harus dihancurkan. Anda sangat mandiri, percaya diri, dan selalu penuh dengan keyakinan.",
     decisionStyle: [
-      "Cepat, logis, dan jarang ragu.",
-      "Berani mengambil risiko besar demi hasil besar.",
-      "Tidak suka membuang waktu untuk analisis berlebihan."
+      "Berpikir sangat cepat, logis, praktis, dan jarang membiarkan keraguan menguasai pikiran.",
+      "Sangat berani mengambil risiko besar jika yakin hal tersebut akan mendatangkan hasil yang sepadan.",
+      "Paling benci membuang waktu untuk rapat berjam-jam atau berdebat hanya untuk hal sepele."
+    ],
+    decisionGuide: [
+      "Ambil waktu jeda sejenak (minimal 10 menit) sebelum menjatuhkan keputusan fatal.",
+      "Pertimbangkan dampak emosional dari keputusan Anda terhadap teman atau anggota tim lainnya.",
+      "Pastikan Anda meminta pendapat 1 orang kepercayaan agar Anda melihat sudut pandang yang berbeda."
     ],
     emotionalDynamics: [
-      "Jarang memperlihatkan kelemahan atau air mata.",
-      "Amarah bisa meledak jika otoritas ditantang.",
-      "Tidak peka terhadap perasaan orang lain."
+      "Sangat anti memperlihatkan kelemahan, air mata, atau kesedihan di hadapan orang lain.",
+      "Amarah bisa sangat cepat meledak (seperti gunung berapi) apabila otoritas Anda ditantang atau merasa diremehkan.",
+      "Terkadang saking fokusnya pada target, Anda menjadi kurang peka terhadap kelelahan batin dan perasaan orang di sekitar Anda."
+    ],
+    stressSigns: [
+      "Bicara menjadi kasar, ketus, dan memerintah", 
+      "Tidak bisa diam dan mulai memarahi orang-orang yang kerjanya lelet", 
+      "Sangat mudah tersulut emosi pada hal sekecil apa pun",
+      "Menjadi diktator yang memaksakan kehendak"
     ],
     interactionStyle: [
-      "Dominan, to the point, dan mengintimidasi.",
-      "Memberi perintah, bukan meminta.",
-      "Jujur secara brutal."
+      "Pembawaan yang sangat mendominasi, selalu to the point, dan kadang auranya membuat orang lain merasa terintimidasi.",
+      "Bahasa Anda seringkali berupa instruksi atau perintah, bukan permintaan tolong.",
+      "Anda jujur secara brutal; jika ada yang salah, Anda akan langsung mengatakannya tanpa banyak saringan."
+    ],
+    interactionTips: [
+      "Aku butuh tolong kamu untuk ngerjain bagian ini ya. Terima kasih banyak sebelumnya.",
+      "Menurut pendapat kalian gimana? Kalau ada usulan yang lebih baik, aku siap mendengarkan."
     ],
     challenges: [
-      "Workaholic ekstrem",
-      "Sering dianggap arogan atau kasar",
-      "Tidak sabar terhadap orang yang 'lambat'",
-      "Sulit mengakui kesalahan"
+      "Sering terjebak menjadi workaholic ekstrem; lupa bahwa hidup bukan cuma soal kerja/tugas",
+      "Sering disalahpahami sebagai sosok yang arogan, bossy (suka menyuruh), atau kasar",
+      "Tingkat kesabaran yang sangat tipis terhadap orang-orang yang menurut Anda 'lambat' atau banyak mengeluh",
+      "Gengsi yang terlalu tinggi membuat Anda paling sulit untuk mengakui kesalahan atau meminta maaf"
     ],
-    conflictTrigger: "Hilang kendali atau ketidakefisienan.",
-    conflictStress: "Anda menjadi diktator dan menyingkirkan penghalang.",
-    checklist: [
-      "Minggu 1-2: Tetapkan zona 'Tanpa Kerja' di akhir pekan.",
-      "Minggu 3-4: Mulai percakapan dengan pertanyaan personal 'Apa kabar?'.",
-      "Minggu 5-6: Delegasikan tugas tanpa mengintervensi caranya.",
-      "Minggu 7-8: Latihan meminta maaf dengan tulus untuk satu hal kecil.",
-      "Minggu 9-10: Lakukan aktivitas relaksasi yang tidak kompetitif.",
-      "Minggu 11-12: Tulis jurnal rasa syukur setiap malam."
+    conflictTrigger: "Situasi yang di luar kendali Anda, menghadapi orang yang pemalas, ketidaktegasan aturan, atau ketika ada yang meremehkan kemampuan Anda.",
+    conflictStress: "Anda akan bertindak seperti mesin pendorong; Anda menyingkirkan siapa pun yang menghalangi jalan Anda dan mengambil alih semuanya secara sepihak.",
+    conflictSolution: [
+      "Tarik napas panjang. Pelankan nada bicara Anda agar orang lain tidak merasa sedang diserang secara fisik.",
+      "Fokus pada akar masalahnya, jangan menggunakan kata-kata yang menjatuhkan harga diri orang tersebut.",
+      "Dengarkan penjelasan mereka walau hanya 1 menit. Jangan langsung memotong atau menghakimi."
     ],
     recommendations: [
-      "Hari 1-3: Ucapkan 'tolong' dan 'terima kasih' secara sadar.",
-      "Hari 4-6: Dengarkan pendapat bawahan tanpa memotong.",
-      "Hari 7-10: Luangkan waktu santai tanpa memikirkan pekerjaan.",
-      "Hari 11-14: Akui satu kesalahan kecil di depan tim untuk belajar rendah hati."
+      "Hari 1-3: Praktikkan sihir kata sopan. Paksakan diri Anda menambah kata 'Tolong' dan 'Terima Kasih' dalam setiap percakapan.",
+      "Hari 4-6: Latih kesabaran telinga Anda. Dengarkan pendapat teman atau kelompok tanpa boleh menyela sedikit pun.",
+      "Hari 7-10: Beri waktu jeda untuk otak. Jadwalkan 1 jam bersantai tanpa memikirkan target, tugas, atau pekerjaan apa pun.",
+      "Hari 11-14: Belajar menundukkan ego. Akui satu kesalahan kecil di depan teman/keluarga, dan lihatlah bahwa itu tidak membuat Anda terlihat lemah."
+    ],
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi komandan yang disegani, namun orang-orang akan mulai mengikuti Anda karena rasa hormat dan cinta, bukan karena rasa takut.",
+    checklist: [
+      "Bulan 1: Tetapkan zona 'Tanpa Tugas/Kerja' di waktu libur akhir pekan untuk mengisi energi kebahagiaan Anda.",
+      "Bulan 1: Latihlah sisi kemanusiaan Anda. Biasakan menyapa 'Apa kabar?' atau 'Gimana harimu?' sebelum membahas tugas.",
+      "Bulan 2: Berlatih memercayai orang lain. Delegasikan 1 tugas kepada teman, dan jangan ikut campur dengan cara kerjanya.",
+      "Bulan 2: Tantang gengsi Anda: Mintalah maaf dengan tulus hari ini kepada satu orang yang pernah Anda sakiti lewat kata-kata.",
+      "Bulan 3: Lakukan aktivitas relaksasi ringan yang sama sekali tidak membutuhkan kompetisi (menang-kalah) seperti jalan sore atau mendengarkan musik.",
+      "Bulan 3: Setiap malam, biasakan menulis 1 atau 2 hal yang Anda syukuri hari itu, agar hati menjadi lebih lembut."
     ],
     suitableCareers: [
-      "CEO / Eksekutif",
-      "Pengusaha",
-      "Jenderal Militer/Polisi",
-      "Pengacara Litigasi"
+      "Pengusaha, Pendiri Perusahaan (CEO), atau Pemimpin Eksekutif",
+      "Manajer Tingkat Atas atau Direktur Perencanaan",
+      "Komandan Militer, Polisi, atau Pemimpin Strategis Lapangan",
+      "Pengacara Litigasi atau Penasihat Hukum",
+      "Pekerjaan yang menuntut ketangguhan mental, pengambilan keputusan, dan arahan kuat"
     ]
   },
   "M-M": {
-    title: "Melankolis Murni (Perfeksionis Analitis)",
-    summary: "Anda memiliki standar kualitas yang sangat tinggi, seringkali melebihi ekspektasi siapa pun. Anda pemikir mendalam, serius, dan berbakat jenius. Segala sesuatu harus sempurna, teratur, dan ideal.",
+    title: "Melankolis Murni (Si Perfeksionis Sejati)",
+    summary: "Anda memiliki kedalaman pemikiran dan standar kualitas yang sangat luar biasa tinggi, seringkali bahkan melebihi apa yang orang lain harapkan. Anda adalah pemikir yang sejati, serius, jeli melihat hal yang terlewatkan, dan seringkali memiliki bakat jenius di bidang yang Anda senangi. Bagi Anda, hidup ini harus memiliki arti, keteraturan, dan berjalan menuju titik ideal yang sempurna.",
     decisionStyle: [
-      "Sangat hati-hati, butuh data lengkap.",
-      "Paralisis analisis (macet karena terlalu banyak mikir).",
-      "Keputusan didasarkan pada standar idealisme."
+      "Sangat hati-hati dan penuh perhitungan; pantang melangkah jika data atau buktinya belum lengkap.",
+      "Sering mengalami 'kelumpuhan akibat terlalu banyak menganalisa' (overthinking) hingga kesulitan memulai.",
+      "Selalu menggunakan acuan standar idealisme tertinggi setiap kali membuat keputusan hidup."
+    ],
+    decisionGuide: [
+      "Batasi waktu pencarian data. Jika Anda sudah punya 70% informasi yang dibutuhkan, berhentilah mencari dan mulailah bertindak.",
+      "Buat daftar untung dan rugi secara tertulis, jangan hanya diputar-putar di dalam kepala.",
+      "Berhentilah menunggu momen yang '100% Sempurna', karena momen itu tidak akan pernah datang."
     ],
     emotionalDynamics: [
-      "Sangat sensitif dan perasa.",
-      "Mudah murung atau depresi jika kenyataan tidak sesuai harapan.",
-      "Cenderung mengingat luka hati dalam waktu lama."
+      "Sangat peka, sensitif, dan mudah menangkap perubahan emosi (baik dari diri sendiri maupun orang lain).",
+      "Sangat rawan terjebak dalam rasa murung, pesimis, atau sedih yang mendalam jika realita tidak seindah ekspektasi.",
+      "Punya memori yang sangat tajam; cenderung mengingat kesalahan atau luka di hati dalam waktu yang sangat lama."
+    ],
+    stressSigns: [
+      "Menarik diri dari kehidupan sosial (mengurung diri)", 
+      "Menjadi sangat murung dan pesimis", 
+      "Sangat kritis dan mulai mencari-cari kesalahan orang lain yang sepele",
+      "Menghukum dan menyalahkan diri sendiri secara terus-menerus"
     ],
     interactionStyle: [
-      "Formal, sopan, dan agak tertutup.",
-      "Kritis terhadap detail perkataan orang lain.",
-      "Setia namun selektif dalam berteman."
+      "Biasanya berbicara dengan formal, sangat sopan, dan menjaga jarak untuk melindungi diri.",
+      "Sangat kritis saat mendengarkan, selalu bisa menangkap jika ada detail cerita yang tidak sinkron.",
+      "Pilih-pilih dalam berteman, namun jika sudah menganggap seseorang sahabat, Anda akan sangat setia selamanya."
+    ],
+    interactionTips: [
+      "Mungkin hasilnya belum 100% sempurna, tapi progres kita hari ini sudah sangat luar biasa.",
+      "Aku menghargai masukanmu yang detail, tapi untuk sekarang kita pakai cara yang sederhana ini dulu ya."
     ],
     challenges: [
-      "Standar yang tidak realistis untuk diri sendiri dan orang lain",
-      "Mudah pesimis dan curiga",
-      "Sulit memaafkan",
-      "Menghabiskan waktu terlalu lama untuk persiapan"
+      "Memiliki standar kesempurnaan yang tidak realistis (baik untuk menyiksa diri sendiri maupun menekan orang lain)",
+      "Cepat merasa pesimis, mudah curiga, dan sering memikirkan skenario terburuk",
+      "Sangat sulit melupakan dan memaafkan kesalahan (mendendam)",
+      "Menghabiskan energi dan waktu terlalu banyak hanya untuk tahap 'Persiapan', sehingga eksekusinya telat"
     ],
-    conflictTrigger: "Kekacauan, ketidakadilan, kritik.",
-    conflictStress: "Anda menarik diri dan menghukum diri sendiri.",
-    checklist: [
-      "Minggu 1-2: Batasi waktu pengambilan keputusan maksimal 15 menit.",
-      "Minggu 3-4: Terima hasil kerja yang 'Cukup Baik' (80% sempurna).",
-      "Minggu 5-6: Bagikan draft pekerjaan sebelum selesai total.",
-      "Minggu 7-8: Olahraga rutin untuk meningkatkan endorfin.",
-      "Minggu 9-10: Stop self-talk negatif saat melakukan kesalahan.",
-      "Minggu 11-12: Bersosialisasi tanpa agenda atau tujuan spesifik."
+    conflictTrigger: "Kekacauan yang berisik, aturan yang dilanggar, melihat ketidakadilan, atau jika Anda dikritik atas hal yang sudah Anda kerjakan dengan sungguh-sungguh.",
+    conflictStress: "Anda akan mendirikan 'tembok' tebal, menjauhi sumber masalah, menyimpan amarah di dalam hati, dan menghukum diri sendiri dengan pikiran negatif.",
+    conflictSolution: [
+      "Keluarkan isi pikiran Anda melalui tulisan terlebih dahulu sebelum Anda membicarakannya langsung.",
+      "Sampaikan perasaan Anda dengan menggunakan fakta-fakta, hindari menyudutkan dengan kata-kata tajam.",
+      "Berikan ruang maaf. Sadarilah bahwa orang lain (dan diri Anda sendiri) adalah manusia biasa yang wajar jika berbuat salah."
     ],
     recommendations: [
-      "Hari 1-3: Turunkan standar 'Sempurna' menjadi 'Cukup Baik'.",
-      "Hari 4-6: Hindari membaca berita negatif atau sedih.",
-      "Hari 7-10: Lupakan satu kesalahan masa lalu.",
-      "Hari 11-14: Lakukan aktivitas fisik untuk mengalihkan pikiran yang ruwet."
+      "Hari 1-3: Praktikkan toleransi. Turunkan standar 'Harus Sempurna' menjadi 'Selesai dan Cukup Baik'.",
+      "Hari 4-6: Lakukan diet hal negatif. Hindari membaca gosip, berita sedih, atau menonton hal-hal yang memicu kemurungan.",
+      "Hari 7-10: Latihan melepaskan. Pilih satu kesalahan masa lalu (diri sendiri atau orang lain), maafkan, dan berhentilah membahasnya.",
+      "Hari 11-14: Gerakkan fisik Anda. Saat pikiran mulai ruwet, berdirilah dan lakukan olahraga ringan atau sekadar berjalan kaki."
+    ],
+    direction: "Dalam 2–4 minggu ke depan, karya Anda akan tetap berkualitas luar biasa tinggi, namun pikiran Anda akan terasa jauh lebih ringan dan hati Anda terbebas dari siksaan 'keinginan tampil sempurna'.",
+    checklist: [
+      "Bulan 1: Tetapkan batas waktu mengambil keputusan. Paksakan diri untuk memutus hal-hal kecil dalam waktu kurang dari 15 menit.",
+      "Bulan 1: Ubah pandangan pikiran Anda. Mulailah berlatih menerima hasil karya/tugas yang berada di level 80% sempurna.",
+      "Bulan 2: Berlatih meminta pendapat teman pada draft tugas Anda, jangan menunggunya sampai benar-benar sempurna baru ditunjukkan.",
+      "Bulan 2: Jadwalkan olahraga rutin mingguan; keringat dan gerakan fisik sangat ampuh menekan overthinking dan memperbaiki mood Anda.",
+      "Bulan 3: Hentikan suara negatif di kepala. Jika pikiran mulai membisikkan 'Aku bodoh', segera ganti dengan 'Aku sedang belajar'.",
+      "Bulan 3: Paksakan diri bergaul keluar rumah setidaknya sekali seminggu tanpa harus ada agenda spesifik, sekadar bersantai."
     ],
     suitableCareers: [
-      "Ilmuwan / Peneliti",
-      "Seniman Murni / Komposer",
-      "Akuntan / Auditor",
-      "Ahli Bedah"
+      "Ilmuwan, Analis Data, atau Peneliti Tingkat Lanjut",
+      "Seniman Murni, Musisi, atau Komposer Kreatif",
+      "Akuntan, Auditor, atau Ahli Keuangan",
+      "Dokter Spesialis, Ahli Bedah, atau Arsitek",
+      "Pekerjaan yang membebaskan waktu untuk berpikir mendalam dan berkarya di belakang layar"
     ]
   },
   "P-P": {
-    title: "Plegmatis Murni (Pencinta Damai Mutlak)",
-    summary: "Anda adalah simbol ketenangan. Sangat santai, mudah bergaul, dan tidak pernah membuat masalah. Anda adalah teman yang paling nyaman karena tidak pernah menuntut. Hidup Anda mengalir seperti air.",
+    title: "Plegmatis Murni (Si Pencinta Damai Mutlak)",
+    summary: "Anda adalah simbol dari ketenangan yang sesungguhnya. Anda sangat santai, mengalir, mudah bergaul tanpa menuntut syarat, dan sepertinya hampir tidak pernah sengaja mencari masalah dengan siapa pun. Di mata orang lain, Anda adalah teman atau anggota keluarga yang paling nyaman karena Anda mendamaikan suasana dan menerima orang lain apa adanya. Anda ibarat air yang tenang dan menyejukkan.",
     decisionStyle: [
-      "Sangat sulit mengambil keputusan (indecisive).",
-      "Cenderung mengikuti pilihan orang lain ('Terserah').",
-      "Menghindari risiko sekecil apa pun."
+      "Sangat sulit mengambil keputusan sendiri (terlalu banyak keraguan atau bingung memilih).",
+      "Paling sering menggunakan kata 'Terserah' dan lebih suka mengekor pada pilihan mayoritas teman.",
+      "Sangat waspada dan selalu berusaha menghindari risiko sekecil apa pun yang bisa merubah zona nyaman."
+    ],
+    decisionGuide: [
+      "Kurangi jumlah pilihan. Jika Anda harus memilih, jangan siapkan lebih dari 2 opsi.",
+      "Tanyakan pada hati kecil Anda sendiri: 'Kalau aku lagi sendirian dan nggak ada siapa-siapa, aku mau pilih apa?'.",
+      "Segera ambil langkah kecil setelah memilih agar Anda tidak terjebak dalam kebingungan lagi."
     ],
     emotionalDynamics: [
-      "Sangat stabil, jarang marah atau sedih berlebihan.",
-      "Meredam emosi demi kedamaian.",
-      "Bisa menjadi keras kepala secara diam-diam jika dipaksa."
+      "Memiliki emosi yang paling stabil di antara yang lain; jarang sekali menunjukkan rasa marah besar atau kesedihan yang heboh.",
+      "Sangat pintar meredam emosi diri sendiri hanya demi melihat orang-orang di sekitarnya tetap rukun dan damai.",
+      "Bisa berubah menjadi sangat keras kepala (secara diam-diam dan pasif) jika terus-terusan dipaksa atau didikte."
+    ],
+    stressSigns: [
+      "Hanya mau tidur seharian atau rebahan untuk menghindari masalah", 
+      "Sikap masa bodoh atau cuek terhadap kewajiban", 
+      "Menonton atau bermain game terus-menerus sebagai bentuk pelarian diri",
+      "Lebih banyak diam saat ditanya"
     ],
     interactionStyle: [
-      "Pendengar yang sangat sabar.",
-      "Tidak banyak bicara, tapi mengamati.",
-      "Menghindari konfrontasi verbal."
+      "Adalah pendengar yang sangat sabar, tenang, dan bersedia menampung cerita apa pun tanpa memotong.",
+      "Tidak terlalu banyak berbicara, tapi Anda sangat jeli mengamati karakter orang di sekitar Anda.",
+      "Sangat menghindari gaya bahasa berdebat, menyindir tajam, atau konfrontasi terbuka (ribut mulut)."
+    ],
+    interactionTips: [
+      "Aku ikut aja sih apa kata kalian, tapi kalau menurutku pribadi opsi A juga lumayan bagus.",
+      "Bisa tolong bantu ingatkan aku nanti? Soalnya aku kadang suka nunda-nunda kalau ngerjain ini sendirian."
     ],
     challenges: [
-      "Sangat pasif dan kurang inisiatif",
-      "Prokrastinasi (menunda) kronis",
-      "Takut perubahan",
-      "Sering dimanfaatkan orang lain"
+      "Sangat pasif, kurang memiliki inisiatif (selalu menunggu disuruh baru bergerak)",
+      "Penyakit menunda-nunda tugas (Prokrastinasi) yang sudah mencapai tahap sangat parah",
+      "Takut yang berlebihan terhadap perubahan atau hal-hal baru di luar rutinitas sehari-hari",
+      "Terlalu sering dimanfaatkan oleh orang yang lebih dominan karena Anda jarang berani menolak"
     ],
-    conflictTrigger: "Tekanan tinggi, konflik terbuka.",
-    conflictStress: "Anda tidur atau masa bodoh.",
-    checklist: [
-      "Minggu 1-2: Buat 3 keputusan kecil setiap hari (makan, baju, rute).",
-      "Minggu 3-4: Suarakan satu ketidaksetujuan dengan sopan.",
-      "Minggu 5-6: Kerjakan tugas yang paling dihindari di pagi hari.",
-      "Minggu 7-8: Tetapkan satu tujuan pribadi yang egois.",
-      "Minggu 9-10: Inisiasi pertemuan sosial (jangan hanya menunggu diajak).",
-      "Minggu 11-12: Review batasan diri: belajar bilang 'Tidak'."
+    conflictTrigger: "Diberi beban kerja yang terlalu tinggi, menghadapi orang yang marah-marah, konflik yang terbuka, atau jika ketenangan waktu istirahatnya dirampas.",
+    conflictStress: "Anda akan memilih untuk mengundurkan diri dari perdebatan, pura-pura tidak dengar, pergi tidur, atau bersikap masa bodoh dengan keadaan.",
+    conflictSolution: [
+      "Mintalah waktu untuk berbicara dengan santai, tanpa menggunakan nada tinggi atau emosi.",
+      "Sampaikan perasaan Anda secara sederhana dan jangan menutupi masalah dengan kata 'Aku nggak apa-apa kok'.",
+      "Ajak orang tersebut mencari kompromi yang paling tidak mengganggu kenyamanan satu sama lain."
     ],
     recommendations: [
-      "Hari 1-3: Buat keputusan makan siang sendiri tanpa tanya orang lain.",
-      "Hari 4-6: Kerjakan tugas tersulit di pagi hari.",
-      "Hari 7-10: Katakan 'Tidak' pada satu permintaan yang memberatkan.",
-      "Hari 11-14: Tetapkan satu target pribadi dan kejar."
+      "Hari 1-3: Berhentilah bilang 'Terserah'. Buat sendiri keputusan Anda untuk hal-hal kecil seperti menu makan siang atau rute jalan.",
+      "Hari 4-6: Lawan kemalasan pagi hari. Selesaikan 1 tugas yang paling Anda benci di jam-jam pertama Anda bangun.",
+      "Hari 7-10: Berlatihlah untuk menolak dengan sopan. Katakan 'Tidak' pada satu permintaan teman yang sebenarnya memberatkan Anda.",
+      "Hari 11-14: Rancang satu tujuan yang murni egois untuk kebahagiaan Anda sendiri, lalu kejar hal tersebut minggu ini."
+    ],
+    direction: "Dalam 2–4 minggu ke depan, Anda akan tetap menjadi sosok sahabat yang mendamaikan hati, tetapi Anda akan jauh lebih teratur, tidak lagi suka menunda-nunda, dan lebih tegas membela diri sendiri.",
+    checklist: [
+      "Bulan 1: Paksa diri Anda untuk mengambil minimal 3 keputusan kecil setiap harinya tanpa harus meminta saran dari siapa pun.",
+      "Bulan 1: Belajar mengutarakan isi kepala. Suarakan satu rasa tidak setuju Anda dengan bahasa yang santun pada sebuah obrolan.",
+      "Bulan 2: Terapkan prinsip 'Kerjakan yang Sulit Dulu'. Bereskan tugas terberat Anda di pagi hari agar sisa hari Anda terasa bebas.",
+      "Bulan 2: Tetapkan minimal 1 ambisi atau tujuan hidup jangka panjang yang harus Anda kejar dengan konsisten.",
+      "Bulan 3: Latih inisiatif bersosial Anda: Jangan cuma menunggu diajak. Kali ini Anda yang harus berinisiatif mengajak teman kumpul.",
+      "Bulan 3: Evaluasi kemampuan Anda membuat batas diri (Boundaries). Jangan pernah biarkan orang lain menggunakan waktu istirahat Anda untuk kepentingan mereka."
     ],
     suitableCareers: [
-      "Administrasi Rutin",
-      "Diplomat",
-      "Guru TK/SD",
-      "Teknisi Lab"
+      "Pekerjaan Administrasi Rutin, Kearsipan, atau Pengolahan Data Statis",
+      "Staf Diplomat, Penengah, atau Humas (Public Relations)",
+      "Guru Anak-anak, Pengajar, atau Perawat (Caregiver)",
+      "Teknisi Laboratorium, Pustakawan, atau Penulis Transkrip",
+      "Pekerjaan stabil yang minim risiko, minim drama, dan terjamin keamanannya"
     ]
   }
 };
