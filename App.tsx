@@ -56,38 +56,43 @@ const QuizScreen: React.FC<{
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 max-w-3xl mx-auto fade-in border-x border-slate-800 shadow-2xl">
-      {/* Progress Bar (Dibuat sedikit lebih tipis di HP) */}
-      <div className="w-full bg-slate-800 h-1.5 md:h-2 sticky top-0 z-10">
+      {/* Progress Bar (Dibuat super tipis di HP) */}
+      <div className="w-full bg-slate-800 h-1 md:h-2 sticky top-0 z-10">
         <div
-          className="bg-indigo-500 h-1.5 md:h-2 transition-all duration-300 ease-out shadow-[0_0_10px_rgba(99,102,241,0.5)]"
+          className="bg-indigo-500 h-1 md:h-2 transition-all duration-300 ease-out shadow-[0_0_10px_rgba(99,102,241,0.5)]"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
 
-      {/* Jarak atas (pt) dan padding (p) diperkecil khusus untuk HP agar konten naik ke atas */}
-      <div className="flex-1 flex flex-col justify-start md:justify-center p-3 sm:p-10 pt-4 md:pt-10">
+      {/* Padding layar dikurangi secara maksimal */}
+      <div className="flex-1 flex flex-col justify-start md:justify-center px-3 sm:px-10 py-3 md:py-10">
         
-        <span className="text-[10px] md:text-xs font-bold text-indigo-400 mb-2 md:mb-3 uppercase tracking-widest bg-slate-800 inline-block w-fit px-2 py-1 rounded-full border border-slate-700">
+        {/* Indikator Soal */}
+        <span className="text-[10px] md:text-xs font-bold text-indigo-400 mb-1.5 md:mb-3 uppercase tracking-widest bg-slate-800 inline-block w-fit px-2 py-0.5 md:py-1 rounded-full border border-slate-700">
           Pertanyaan {currentIndex + 1} / {TOTAL_QUESTIONS}
         </span>
 
-        {/* Ukuran font pertanyaan disesuaikan dan jarak bawah (mb) dirapatkan */}
-        <h2 className="text-lg sm:text-2xl md:text-4xl font-bold text-white mb-4 md:mb-8 leading-snug">
+        {/* Ukuran Teks Pertanyaan sedikit dirapatkan */}
+        <h2 className="text-[15px] sm:text-2xl md:text-4xl font-bold text-white mb-3 md:mb-8 leading-snug">
           {question.question}
         </h2>
 
-        {/* Jarak antar tombol (gap) dirapatkan di HP */}
-        <div className="grid gap-2 md:gap-4">
+        {/* Jarak antar tombol opsi ditipiskan (gap-1.5 = 6px) */}
+        <div className="grid gap-1.5 md:gap-4">
           {(Object.keys(question.options) as Array<keyof typeof question.options>).map((key) => (
             <button
               key={key}
               onClick={() => onAnswer(question.mapping[key])}
-              className="group p-2.5 md:p-5 text-left bg-slate-800 border-2 border-slate-700 rounded-xl md:rounded-2xl hover:border-indigo-500 hover:bg-slate-700/50 transition-all duration-200 flex items-start"
+              // Ketebalan tombol, border, dan padding (px, py) diperkecil
+              className="group px-3 py-2 md:p-5 text-left bg-slate-800 border border-slate-700 rounded-lg md:rounded-2xl hover:border-indigo-500 hover:bg-slate-700/50 transition-all duration-200 flex items-start"
             >
-              <span className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-slate-700 text-slate-300 text-xs md:text-base font-bold rounded-full mr-3 md:mr-5 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+              {/* Ikon Huruf (A, B, C, D) diperkecil */}
+              <span className="flex-shrink-0 w-5 h-5 md:w-8 md:h-8 flex items-center justify-center bg-slate-700 text-slate-300 text-[10px] md:text-base font-bold rounded-full mr-2.5 md:mr-5 mt-0.5 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
                 {key}
               </span>
-              <span className="text-sm md:text-lg text-slate-200 group-hover:text-white font-medium leading-tight md:leading-snug mt-0.5">
+              
+              {/* Teks Opsi Jawaban dibuat ukuran 13px dan spasinya rapat */}
+              <span className="text-[13px] md:text-lg text-slate-200 group-hover:text-white font-medium leading-tight md:leading-snug">
                 {question.options[key]}
               </span>
             </button>
