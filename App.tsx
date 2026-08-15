@@ -14,25 +14,34 @@ const PURE_TYPE_GAP_THRESHOLD = 4; // disesuaikan dari 15 → 4 karena soal lebi
 // --- Components ---
 
 const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
-  <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center max-w-2xl mx-auto fade-in">
-    <div className="mb-6 p-4 bg-slate-800 rounded-full ring-4 ring-indigo-500/20 shadow-2xl shadow-indigo-500/10">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  // Perubahan: Di HP pakai justify-start dan pt-12 agar konten naik ke atas, 
+  // di PC/Laptop tetap justify-center.
+  <div className="flex flex-col items-center justify-start pt-12 md:justify-center md:pt-4 min-h-screen p-4 text-center max-w-2xl mx-auto fade-in">
+    
+    {/* Ukuran icon dan jarak bawah diperkecil sedikit di HP */}
+    <div className="mb-4 md:mb-6 p-4 bg-slate-800 rounded-full ring-4 ring-indigo-500/20 shadow-2xl shadow-indigo-500/10">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 md:h-16 md:w-16 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     </div>
-    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
+    
+    {/* Ukuran Font disesuaikan agar lebih proporsional di HP */}
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
       Tes Kepribadian
     </h1>
-    <p className="text-base md:text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
+    
+    <p className="text-sm sm:text-base md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed max-w-lg px-2">
       Temukan tipe kepribadian Anda berdasarkan 4 Type Personality: Sanguinis, Koleris, Melankolis, Plegmatis
     </p>
+    
     <button
       onClick={onStart}
-      className="px-8 py-3 md:px-10 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 hover:-translate-y-1"
+      className="px-8 py-3.5 md:px-10 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 hover:-translate-y-1"
     >
       Mulai Tes Sekarang
     </button>
-    <p className="mt-6 text-xs md:text-sm text-slate-500 font-medium tracking-wide uppercase">
+    
+    <p className="mt-5 md:mt-6 text-xs md:text-sm text-slate-500 font-medium tracking-wide uppercase">
       Gratis &amp; Tanpa Login · {TOTAL_QUESTIONS} Pertanyaan
     </p>
   </div>
@@ -43,40 +52,42 @@ const QuizScreen: React.FC<{
   currentIndex: number;
   onAnswer: (answer: Temperament) => void;
 }> = ({ question, currentIndex, onAnswer }) => {
-  // ✅ FIX #2 — Pakai konstanta TOTAL_QUESTIONS
   const progress = (currentIndex / TOTAL_QUESTIONS) * 100;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 max-w-3xl mx-auto fade-in border-x border-slate-800 shadow-2xl">
-      {/* Progress Bar */}
-      <div className="w-full bg-slate-800 h-2 sticky top-0 z-10">
+      {/* Progress Bar (Dibuat sedikit lebih tipis di HP) */}
+      <div className="w-full bg-slate-800 h-1.5 md:h-2 sticky top-0 z-10">
         <div
-          className="bg-indigo-500 h-2 transition-all duration-300 ease-out shadow-[0_0_10px_rgba(99,102,241,0.5)]"
+          className="bg-indigo-500 h-1.5 md:h-2 transition-all duration-300 ease-out shadow-[0_0_10px_rgba(99,102,241,0.5)]"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
 
-      <div className="flex-1 flex flex-col justify-start md:justify-center p-4 sm:p-10 pt-6 md:pt-10">
-        <span className="text-xs font-bold text-indigo-400 mb-3 uppercase tracking-widest bg-slate-800 inline-block w-fit px-2 py-1 rounded-full border border-slate-700">
-          {/* ✅ FIX #2 — Pakai konstanta TOTAL_QUESTIONS */}
+      {/* Jarak atas (pt) dan padding (p) diperkecil khusus untuk HP agar konten naik ke atas */}
+      <div className="flex-1 flex flex-col justify-start md:justify-center p-3 sm:p-10 pt-4 md:pt-10">
+        
+        <span className="text-[10px] md:text-xs font-bold text-indigo-400 mb-2 md:mb-3 uppercase tracking-widest bg-slate-800 inline-block w-fit px-2 py-1 rounded-full border border-slate-700">
           Pertanyaan {currentIndex + 1} / {TOTAL_QUESTIONS}
         </span>
 
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-6 md:mb-12 leading-snug">
+        {/* Ukuran font pertanyaan disesuaikan dan jarak bawah (mb) dirapatkan */}
+        <h2 className="text-lg sm:text-2xl md:text-4xl font-bold text-white mb-4 md:mb-8 leading-snug">
           {question.question}
         </h2>
 
-        <div className="grid gap-3 md:gap-4">
+        {/* Jarak antar tombol (gap) dirapatkan di HP */}
+        <div className="grid gap-2 md:gap-4">
           {(Object.keys(question.options) as Array<keyof typeof question.options>).map((key) => (
             <button
               key={key}
               onClick={() => onAnswer(question.mapping[key])}
-              className="group p-3 md:p-5 text-left bg-slate-800 border-2 border-slate-700 rounded-xl md:rounded-2xl hover:border-indigo-500 hover:bg-slate-700/50 transition-all duration-200 flex items-start"
+              className="group p-2.5 md:p-5 text-left bg-slate-800 border-2 border-slate-700 rounded-xl md:rounded-2xl hover:border-indigo-500 hover:bg-slate-700/50 transition-all duration-200 flex items-start"
             >
               <span className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-slate-700 text-slate-300 text-xs md:text-base font-bold rounded-full mr-3 md:mr-5 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
                 {key}
               </span>
-              <span className="text-sm md:text-lg text-slate-200 group-hover:text-white font-medium leading-tight">
+              <span className="text-sm md:text-lg text-slate-200 group-hover:text-white font-medium leading-tight md:leading-snug mt-0.5">
                 {question.options[key]}
               </span>
             </button>
