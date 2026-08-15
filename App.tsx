@@ -104,10 +104,7 @@ const QuizScreen: React.FC<{
 
 const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ result, onRetry }) => {
   const [isDownloading, setIsDownloading] = useState(false);
-  
-  // ✅ STATE BARU: Untuk mengecek apakah hasil sudah dibuka atau belum
   const [isRevealed, setIsRevealed] = useState(false); 
-  
   const printRef = useRef<HTMLDivElement>(null);
 
   const sortedScores = (Object.entries(result.scores) as [Temperament, number][])
@@ -200,58 +197,50 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
   };
 
   const handleRevealResult = () => {
-    openAffiliateLink(); // Buka link shopee di tab baru
-    setIsRevealed(true); // Tampilkan hasil lengkap
-    window.parent.postMessage('scrollToTop', '*'); // Posisikan layar ke atas lagi
+    openAffiliateLink();
+    setIsRevealed(true);
+    window.parent.postMessage('scrollToTop', '*');
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 py-10 px-4 sm:px-6 fade-in text-slate-200">
+    <div className="min-h-screen bg-slate-900 py-6 md:py-10 px-4 sm:px-6 fade-in text-slate-200 flex flex-col justify-center">
       <div
         ref={printRef}
-        className="max-w-4xl mx-auto bg-slate-800 rounded-[2rem] shadow-2xl overflow-hidden border border-slate-700"
+        className="max-w-4xl w-full mx-auto bg-slate-800 rounded-[2rem] shadow-2xl overflow-hidden border border-slate-700"
       >
 
-        {/* Header Section - SELALU MUNCUL DI AWAL */}
-        <div className="bg-gradient-to-br from-indigo-900 to-slate-900 p-8 text-center border-b border-indigo-900/50">
-          <h2 className="text-xl text-indigo-300 font-semibold mb-3 tracking-wide uppercase">Hasil Analisis Anda</h2>
-          <div className="inline-block bg-indigo-500/20 border border-indigo-500/30 px-6 py-2 rounded-full text-sm font-medium tracking-wide mb-6 text-indigo-200">
+        {/* Header Section - Ukuran ditipiskan khusus di HP agar langsung muat */}
+        <div className="bg-gradient-to-br from-indigo-900 to-slate-900 p-6 md:p-8 text-center border-b border-indigo-900/50">
+          <h2 className="text-sm md:text-xl text-indigo-300 font-semibold mb-2 md:mb-3 tracking-wide uppercase">Hasil Analisis Anda</h2>
+          <div className="inline-block bg-indigo-500/20 border border-indigo-500/30 px-4 py-1.5 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-medium tracking-wide mb-3 md:mb-6 text-indigo-200">
             Tipe Dominan: {isPure ? `${temperamentsFull[result.primary]} Murni` : `${temperamentsFull[result.primary]} & ${temperamentsFull[result.secondary]}`}
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-2 text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-1 text-white leading-tight">
             {profile.title}
           </h1>
         </div>
 
         {/* LOGIKA PENAMPILAN */}
         {!isRevealed ? (
-          /* JIKA BELUM DIKLIK: Tampilkan Tombol dan Pesan Iklan */
-          <div className="p-8 md:p-12 text-center bg-slate-800 flex flex-col items-center justify-center fade-in">
-            <div className="bg-indigo-900/30 p-6 rounded-2xl border border-indigo-500/30 max-w-lg mb-8 shadow-inner">
-              <span className="text-5xl block mb-4 animate-bounce">🎁</span>
-              <p className="text-slate-200 text-lg leading-relaxed mb-2">
-                Selamat! Hasil analisa kepribadian Anda sudah siap.
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                Klik tombol di bawah untuk membuka <strong>Hasil Lengkap</strong> (Kekuatan, Kelemahan, Karir, dan Saran) yang juga bisa Anda Download format PDF-nya.
-              </p>
-              <div className="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
-                <p className="text-xs text-amber-400 italic font-medium">
-                  *Catatan: Jika ada tab promosi/iklan yang terbuka, Anda bisa langsung menutupnya (Close) dan kembali ke halaman ini.
-                </p>
-              </div>
-            </div>
+          /* JIKA BELUM DIKLIK: Tampilan Rapat, Profesional & Bebas Scroll */
+          <div className="px-6 py-8 md:p-12 text-center bg-slate-800 flex flex-col items-center justify-center fade-in">
+            <p className="text-slate-300 text-sm md:text-lg mb-6 max-w-md leading-relaxed">
+              Analisis kepribadian Anda telah selesai disusun. Buka dokumen di bawah ini untuk membaca rincian <strong>kekuatan, tantangan, serta saran pengembangan</strong> diri Anda.
+            </p>
 
             <button
               onClick={handleRevealResult}
-              className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all transform hover:scale-105 hover:-translate-y-1 text-lg flex items-center gap-3 overflow-hidden"
+              className="px-6 py-3.5 md:px-8 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 hover:-translate-y-1 text-sm md:text-lg flex items-center gap-2.5 w-full sm:w-auto justify-center"
             >
-              <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
-              <span className="relative">Buka Hasil Lengkap Saya</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="relative h-6 w-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
+              Buka Hasil Lengkap
             </button>
+            
+            <p className="mt-5 text-[11px] text-slate-500 max-w-sm">
+              *Catatan: Sistem mungkin akan membuka tautan halaman sponsor (Shopee) di tab baru. Anda dapat langsung menutupnya untuk kembali membaca hasil tes.
+            </p>
           </div>
         ) : (
           /* JIKA SUDAH DIKLIK: Tampilkan Hasil Sepenuhnya */
@@ -286,11 +275,11 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
             </div>
 
             {/* Content Section */}
-            <div className="p-8 space-y-12 leading-relaxed">
+            <div className="p-6 md:p-8 space-y-10 md:space-y-12 leading-relaxed">
 
               <section>
                 <h3 className="text-xl font-bold text-indigo-400 mb-4 border-l-4 border-indigo-500 pl-4">Ringkasan Profil</h3>
-                <p className="text-lg text-slate-300">{profile.summary}</p>
+                <p className="text-base md:text-lg text-slate-300">{profile.summary}</p>
               </section>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -298,8 +287,8 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                   <h3 className="text-xl font-bold text-emerald-400 mb-4 border-l-4 border-emerald-500 pl-4">Kekuatan & Pola Pikir</h3>
                   <ul className="space-y-4 mb-6">
                     {profile.decisionStyle.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-emerald-500 mr-3 mt-1">✓</span>
+                      <li key={idx} className="flex items-start text-sm md:text-base">
+                        <span className="text-emerald-500 mr-3 mt-0.5">✓</span>
                         <span className="text-slate-300">{item}</span>
                       </li>
                     ))}
@@ -318,8 +307,8 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                   <h3 className="text-xl font-bold text-rose-400 mb-4 border-l-4 border-rose-500 pl-4">Tantangan Khas</h3>
                   <ul className="space-y-4">
                     {profile.challenges.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-rose-500 mr-3 mt-1">!</span>
+                      <li key={idx} className="flex items-start text-sm md:text-base">
+                        <span className="text-rose-500 mr-3 mt-0.5">!</span>
                         <span className="text-slate-300">{item}</span>
                       </li>
                     ))}
@@ -327,12 +316,12 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                 </section>
               </div>
 
-              <section className="bg-indigo-900/10 p-8 rounded-2xl border border-indigo-500/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Dinamika Emosi & Interaksi</h3>
+              <section className="bg-indigo-900/10 p-6 md:p-8 rounded-2xl border border-indigo-500/20">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Dinamika Emosi & Interaksi</h3>
                 <div className="space-y-8">
                   <div>
                     <strong className="block text-indigo-300 text-sm uppercase mb-3 tracking-wider">⚡ Emosi Internal</strong>
-                    <ul className="list-disc ml-5 space-y-2 text-slate-300">
+                    <ul className="list-disc ml-5 space-y-2 text-slate-300 text-sm md:text-base">
                       {profile.emotionalDynamics.map((e, i) => <li key={i}>{e}</li>)}
                     </ul>
                     {profile.stressSigns && (
@@ -347,14 +336,14 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                   </div>
                   <div className="border-t border-indigo-500/20 pt-6">
                     <strong className="block text-indigo-300 text-sm uppercase mb-3 tracking-wider">💬 Gaya Interaksi</strong>
-                    <ul className="list-disc ml-5 space-y-2 text-slate-300">
+                    <ul className="list-disc ml-5 space-y-2 text-slate-300 text-sm md:text-base">
                       {profile.interactionStyle.map((e, i) => <li key={i}>{e}</li>)}
                     </ul>
                     {profile.interactionTips && (
                       <div className="mt-4 bg-slate-900/50 p-4 rounded-lg border border-slate-700">
                         <strong className="block text-slate-400 text-xs uppercase mb-2">Contoh Kalimat Efektif:</strong>
                         {profile.interactionTips.map((tip, i) => (
-                          <p key={i} className="text-indigo-200 italic mb-1">"{tip}"</p>
+                          <p key={i} className="text-indigo-200 italic mb-1 text-sm md:text-base">"{tip}"</p>
                         ))}
                       </div>
                     )}
@@ -364,7 +353,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
 
               <section>
                 <h3 className="text-xl font-bold text-white mb-4">Manajemen Konflik</h3>
-                <div className="bg-slate-800 border border-slate-700 p-6 rounded-xl space-y-4 shadow-lg">
+                <div className="bg-slate-800 border border-slate-700 p-6 rounded-xl space-y-4 shadow-lg text-sm md:text-base">
                   <div><strong className="text-slate-200 block mb-1">🔥 Pemicu:</strong> <span className="text-slate-400">{profile.conflictTrigger}</span></div>
                   {profile.conflictStress && <div><strong className="text-slate-200 block mb-1">🤯 Saat Stres:</strong> <span className="text-slate-400">{profile.conflictStress}</span></div>}
                   {profile.conflictSolution && (
@@ -380,7 +369,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
 
               <section>
                 <h3 className="text-xl font-bold text-amber-400 mb-4 border-l-4 border-amber-500 pl-4">Rekomendasi Pengembangan</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4 text-sm md:text-base">
                   {profile.recommendations.map((rec, idx) => (
                     <div key={idx} className="bg-amber-900/10 p-5 rounded-xl border border-amber-500/20 text-amber-100/90 shadow-sm">
                       {rec}
@@ -393,10 +382,10 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                 <section>
                   <h3 className="text-xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">Checklist Pembiasaan 90 Hari</h3>
                   <div className="bg-blue-900/10 p-6 rounded-xl border border-blue-500/20">
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 text-sm md:text-base">
                       {profile.checklist.map((item, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-blue-400 mr-3 font-bold mt-1">•</span>
+                          <span className="text-blue-400 mr-3 font-bold mt-0.5">•</span>
                           <span className="text-slate-300">{item}</span>
                         </li>
                       ))}
@@ -406,18 +395,18 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               )}
 
               {profile.direction && (
-                <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-8 rounded-2xl text-center border border-slate-700 shadow-xl relative overflow-hidden">
+                <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-6 md:p-8 rounded-2xl text-center border border-slate-700 shadow-xl relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-                  <h3 className="text-sm font-bold mb-3 uppercase tracking-widest text-slate-400">Arah yang Jelas</h3>
-                  <p className="text-xl md:text-2xl font-medium leading-relaxed text-indigo-100">"{profile.direction}"</p>
+                  <h3 className="text-xs md:text-sm font-bold mb-3 uppercase tracking-widest text-slate-400">Arah yang Jelas</h3>
+                  <p className="text-lg md:text-2xl font-medium leading-relaxed text-indigo-100 italic">"{profile.direction}"</p>
                 </section>
               )}
 
               <section>
                 <h3 className="text-xl font-bold text-white mb-4">Cocok di Bidang / Peran</h3>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3">
                   {profile.suitableCareers.map((job, idx) => (
-                    <span key={idx} className="px-4 py-2 bg-slate-700 text-indigo-200 rounded-lg font-medium text-sm border border-slate-600 hover:bg-slate-600 transition-colors cursor-default">
+                    <span key={idx} className="px-3 py-1.5 md:px-4 md:py-2 bg-slate-700 text-indigo-200 rounded-lg font-medium text-xs md:text-sm border border-slate-600 hover:bg-slate-600 transition-colors cursor-default">
                       {job}
                     </span>
                   ))}
@@ -427,7 +416,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
             </div>
 
             {/* Disclaimer */}
-            <div className="bg-slate-900 p-8 text-sm text-slate-500 border-t border-slate-700 leading-relaxed">
+            <div className="bg-slate-900 p-6 md:p-8 text-xs md:text-sm text-slate-500 border-t border-slate-700 leading-relaxed">
               <strong className="block mb-3 font-bold uppercase text-slate-400 tracking-wide">Disclaimer & Batasan Penggunaan</strong>
               <p className="mb-2">Dokumen ini adalah materi edukasi dan pengembangan diri berbasis kerangka temperamen/kepribadian. Dokumen ini bukan diagnosis klinis, bukan alat diagnosis gangguan psikologis, dan tidak menggantikan penilaian profesional (psikolog/psikiater).</p>
               <p className="mb-2">Hasil dan saran dalam dokumen ini bersifat umum dan dapat berbeda tergantung konteks kehidupan, pengalaman, dan lingkungan Anda. Gunakan informasi ini sebagai bahan refleksi untuk pengambilan keputusan yang lebih sadar.</p>
@@ -435,10 +424,10 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               <p><strong>Kerahasiaan:</strong> Jika dokumen ini dibuat berdasarkan data pribadi, informasi Anda dijaga kerahasiaannya dan tidak dibagikan tanpa izin.</p>
             </div>
 
-            <div className="p-8 text-center bg-slate-800 flex flex-col sm:flex-row gap-4 justify-center" data-html2canvas-ignore="true">
+            <div className="p-6 md:p-8 text-center bg-slate-800 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center" data-html2canvas-ignore="true">
               <button
                 onClick={onRetry}
-                className="px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all border border-slate-600"
+                className="px-6 py-3 md:px-8 md:py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all border border-slate-600 text-sm md:text-base"
               >
                 Ulangi Tes
               </button>
@@ -446,11 +435,11 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               <button
                 onClick={handleDownloadPDF}
                 disabled={isDownloading}
-                className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="px-6 py-3 md:px-8 md:py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed text-sm md:text-base"
               >
                 {isDownloading ? (
                   <>
-                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -458,7 +447,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                   </>
                 ) : (
                   <>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     Download PDF
