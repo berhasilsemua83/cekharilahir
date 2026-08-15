@@ -209,7 +209,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
         className="max-w-4xl w-full mx-auto bg-slate-800 rounded-[2rem] shadow-2xl overflow-hidden border border-slate-700"
       >
 
-        {/* Header Section - Ukuran ditipiskan khusus di HP agar langsung muat */}
+        {/* Header Section */}
         <div className="bg-gradient-to-br from-indigo-900 to-slate-900 p-6 md:p-8 text-center border-b border-indigo-900/50">
           <h2 className="text-sm md:text-xl text-indigo-300 font-semibold mb-2 md:mb-3 tracking-wide uppercase">Hasil Analisis Anda</h2>
           <div className="inline-block bg-indigo-500/20 border border-indigo-500/30 px-4 py-1.5 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-medium tracking-wide mb-3 md:mb-6 text-indigo-200">
@@ -222,7 +222,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
 
         {/* LOGIKA PENAMPILAN */}
         {!isRevealed ? (
-          /* JIKA BELUM DIKLIK: Tampilan Rapat, Profesional & Bebas Scroll */
+          /* JIKA BELUM DIKLIK: Tampilan Rapat, Profesional & Info Jelas */
           <div className="px-6 py-8 md:p-12 text-center bg-slate-800 flex flex-col items-center justify-center fade-in">
             <p className="text-slate-300 text-sm md:text-lg mb-6 max-w-md leading-relaxed">
               Analisis kepribadian Anda telah selesai disusun. Buka dokumen di bawah ini untuk membaca rincian <strong>kekuatan, tantangan, serta saran pengembangan</strong> diri Anda.
@@ -238,9 +238,16 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
               Buka Hasil Lengkap
             </button>
             
-            <p className="mt-5 text-[11px] text-slate-500 max-w-sm">
-              *Catatan: Sistem mungkin akan membuka tautan halaman sponsor (Shopee) di tab baru. Anda dapat langsung menutupnya untuk kembali membaca hasil tes.
-            </p>
+            {/* ✅ KOTAK INFO BARU: Lebih Terbaca & Elegan */}
+            <div className="mt-7 bg-slate-900/60 border border-slate-700 rounded-xl p-3.5 md:p-4 max-w-sm mx-auto flex items-start text-left gap-3 shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                <strong>Info:</strong> Untuk mendukung layanan ini, sistem akan membuka halaman sponsor di tab baru. Anda dapat langsung menutup tab tersebut untuk melihat hasil tes Anda di sini.
+              </p>
+            </div>
+
           </div>
         ) : (
           /* JIKA SUDAH DIKLIK: Tampilkan Hasil Sepenuhnya */
