@@ -438,6 +438,7 @@ export default function App() {
     setCurrentIndex(0);
     setGameState('quiz');
     window.scrollTo(0, 0);
+    window.parent.postMessage('scrollToTop', '*');
   };
 
   const handleAnswer = (answer: Temperament) => {
@@ -451,6 +452,7 @@ export default function App() {
     if (currentIndex < TOTAL_QUESTIONS - 1) {
       setCurrentIndex(currentIndex + 1);
       window.scrollTo(0, 0);
+      window.parent.postMessage('scrollToTop', '*');
     } else {
       finishTest(newAnswers);
     }
@@ -461,6 +463,7 @@ export default function App() {
     setResult(res);
     setGameState('result');
     window.scrollTo(0, 0);
+    window.parent.postMessage('scrollToTop', '*');
   };
 
   return (
