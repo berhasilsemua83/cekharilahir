@@ -225,7 +225,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
           /* JIKA BELUM DIKLIK: Tampilan Rapat, Profesional & Info Jelas */
           <div className="px-6 py-8 md:p-12 text-center bg-slate-800 flex flex-col items-center justify-center fade-in">
             <p className="text-slate-300 text-sm md:text-lg mb-6 max-w-md leading-relaxed">
-              Analisis kepribadian Anda telah selesai disusun. Buka dokumen di bawah ini untuk membaca rincian <strong>kekuatan, tantangan, serta saran pengembangan</strong> diri Anda.
+              Analisis kepribadian Anda telah selesai disusun. Buka dokumen di bawah ini untuk membaca rincian <strong>kekuatan, tantangan, serta saran pengembangan</strong> diri Anda, Bisa di download PDF.
             </p>
 
             <button
