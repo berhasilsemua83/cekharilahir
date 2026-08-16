@@ -14,34 +14,40 @@ const PURE_TYPE_GAP_THRESHOLD = 4; // disesuaikan dari 15 → 4 karena soal lebi
 // --- Components ---
 
 const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
-  // Perubahan: Di HP pakai justify-start dan pt-12 agar konten naik ke atas, 
-  // di PC/Laptop tetap justify-center.
-  <div className="flex flex-col items-center justify-start pt-12 md:justify-center md:pt-4 min-h-screen p-4 text-center max-w-2xl mx-auto fade-in">
+  // 1. pt-12 dikurangi jadi pt-6 agar keseluruhan konten naik ke atas layar
+  <div className="flex flex-col items-center justify-start pt-6 md:justify-center md:pt-4 min-h-screen p-4 text-center max-w-2xl mx-auto fade-in">
     
-    {/* Ukuran icon dan jarak bawah diperkecil sedikit di HP */}
-    <div className="mb-4 md:mb-6 p-4 bg-slate-800 rounded-full ring-4 ring-indigo-500/20 shadow-2xl shadow-indigo-500/10">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 md:h-16 md:w-16 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    {/* 2. Ukuran icon dan jarak bawahnya diperkecil */}
+    <div className="mb-3 md:mb-6 p-3 md:p-4 bg-slate-800 rounded-full ring-4 ring-indigo-500/20 shadow-2xl shadow-indigo-500/10">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 md:h-16 md:w-16 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     </div>
     
-    {/* Ukuran Font disesuaikan agar lebih proporsional di HP */}
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
-      Tes Kepribadian, Bukan Sekedar Tes, Ini Cermin diri Anda
+    {/* 3. Ukuran judul di HP diperkecil sedikit (text-2xl) dan dibuat 2 baris agar rapi */}
+    <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4 tracking-tight leading-tight md:leading-tight">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
+        Tes Kepribadian,
+      </span>
+      <br />
+      Bukan Sekedar Tes, Ini Cermin Diri Anda
     </h1>
     
-    <p className="text-sm sm:text-base md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed max-w-lg px-2">
-      Temukan Kekuatan Tersembunyi, Kelemahan yang perlu di perbaiki, dan Saran Personal untuk Hidup yang lebih Baik- Gratis, Hasil bisa di download PDF
+    {/* 4. Ukuran teks deskripsi dan jarak antar baris dirapatkan (leading-snug) */}
+    <p className="text-[13px] sm:text-base md:text-xl text-slate-300 mb-5 md:mb-8 leading-snug md:leading-relaxed max-w-lg px-2">
+      Temukan Kekuatan Tersembunyi, Kelemahan yang perlu di perbaiki, dan Saran Personal untuk Hidup yang lebih Baik - Gratis, Hasil bisa di download PDF
     </p>
     
+    {/* 5. Padding tombol di HP ditipiskan (py-3) */}
     <button
       onClick={onStart}
-      className="px-8 py-3.5 md:px-10 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 hover:-translate-y-1"
+      className="px-8 py-3 md:px-10 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 hover:-translate-y-1"
     >
       Mulai Tes Sekarang
     </button>
     
-    <p className="mt-5 md:mt-6 text-xs md:text-sm text-slate-500 font-medium tracking-wide uppercase">
+    {/* 6. Teks paling bawah dirapatkan */}
+    <p className="mt-4 md:mt-6 text-[10px] md:text-sm text-slate-500 font-medium tracking-wide uppercase">
       Gratis &amp; Tanpa Login · {TOTAL_QUESTIONS} Pertanyaan
     </p>
   </div>
