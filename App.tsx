@@ -244,7 +244,7 @@ const ResultScreen: React.FC<{ result: TestResult; onRetry: () => void }> = ({ r
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-                <strong>Info:</strong> Untuk mendukung layanan ini, sistem akan membuka halaman sponsor di tab baru. Anda dapat langsung menutup tab tersebut untuk melihat hasil tes Anda di sini.
+                <strong>Info:</strong> Untuk mendukung layanan ini, sistem akan membuka halaman sponsor di tab baru. Anda dapat menutup tab tersebut untuk melihat hasil tes Anda di sini.
               </p>
             </div>
 
