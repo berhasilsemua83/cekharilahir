@@ -27,11 +27,11 @@ const StartScreen: React.FC<{ onStart: () => void }> = ({ onStart }) => (
     
     {/* Ukuran Font disesuaikan agar lebih proporsional di HP */}
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
-      Tes Kepribadian
+      Tes Kepribadian, Bukan Sekedar Tes, Ini Cermin diri Anda
     </h1>
     
     <p className="text-sm sm:text-base md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed max-w-lg px-2">
-      Temukan tipe kepribadian Anda berdasarkan 4 Type Personality: Sanguinis, Koleris, Melankolis, Plegmatis
+      Temukan Kekuatan Tersembunyi, Kelemahan yang perlu di perbaiki, dan Saran Personal untuk Hidup yang lebih Baik- Gratis, Hasil bisa di download PDF
     </p>
     
     <button
